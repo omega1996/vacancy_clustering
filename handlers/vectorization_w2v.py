@@ -12,9 +12,6 @@ word2vec = Word2Vec.load(os.path.join(os.getcwd(), "../big_word2vec/big_word2vec
 word2vec.wv.init_sims()
 
 
-
-
-
 def word_averaging(wv, words):
     all_words, mean = set(), []
 

@@ -49,11 +49,11 @@ def process_text(full_text, filter_pos=("PREP", "NPRO", "CONJ")):
     preprocessed_text = complex_preprocess(single_line_text)
     lemmatized_text, lemmatized_text_pos_tags = lemmatize(preprocessed_text, filter_pos=filter_pos)
 
-    return { "full_text" : full_text,
-    "single_line_text": single_line_text,
-    "preprocessed_text": preprocessed_text,
-    "lemmatized_text": lemmatized_text,
-    "lemmatized_text_pos_tags": lemmatized_text_pos_tags}
+    return {"full_text" : full_text,
+            "single_line_text": single_line_text,
+            "preprocessed_text": preprocessed_text,
+            "lemmatized_text": lemmatized_text,
+            "lemmatized_text_pos_tags": lemmatized_text_pos_tags}
 
 
 def process_text_documents(text_files_directory, filter_pos=("PREP", "NPRO", "CONJ")):
@@ -92,7 +92,8 @@ def process_text_documents(text_files_directory, filter_pos=("PREP", "NPRO", "CO
 #
 #     competences = pd.DataFrame(columns=['full_text_match'])
 #     competences['full_text_match'] = pd.Series(competence)
-#     competences['processed_text'] = competences['full_text_match'].apply(lambda text: process_text(str(text))['lemmatized_text_pos_tags'])  # лемматизируем
+#     # лемматизируем
+#     competences['processed_text'] = competences['full_text_match'].apply(lambda text: process_text(str(text))['lemmatized_text_pos_tags'])
 #     competences = get_vectorized_avg_w2v_corpus(competences, word2vec.wv)
 #     return similarity(competences, zyn, topn=topn)
 

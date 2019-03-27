@@ -6,15 +6,9 @@ import os
 import pymorphy2
 from string import ascii_lowercase, digits, whitespace
 
-
-
 os.getcwd()
-
-
 morph = pymorphy2.MorphAnalyzer()
-
 cyrillic = u"абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
-
 allowed_characters = ascii_lowercase + digits + cyrillic + whitespace
 
 

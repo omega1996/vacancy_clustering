@@ -17,7 +17,11 @@ def complex_preprocess(text, additional_allowed_characters = "+#"):
 
 
 def lemmatize(tokens, filter_pos):
-    '''Produce normal forms for russion words using pymorphy2
+    '''
+    Produce normal forms for russion words using pymorphy2
+    :param tokens:
+    :param filter_pos:
+    :return:
     '''
     lemmas = []
     tagged_lemmas = []
@@ -37,7 +41,11 @@ def lemmatize(tokens, filter_pos):
 
 
 def process_text(full_text, filter_pos=("PREP", "NPRO", "CONJ")):
-    '''Process a single text and return a processed version
+    '''
+    Process a single text and return a processed version
+    :param full_text:
+    :param filter_pos:
+    :return: a processed version
     '''
     single_line_text = full_text.replace('\n',' ')
     preprocessed_text = complex_preprocess(single_line_text)
@@ -58,37 +66,5 @@ def process_text_documents(text_files_directory, filter_pos=("PREP", "NPRO", "CO
                 doc_dict = process_text(full_text)
                 doc_dict["filename"] = file
                 yield doc_dict
-
-
-
-# def similarity(competences, zyn, topn=5):
-#     df_result = pd.DataFrame(columns=['similarity', 'full_text', 'full_text_match', 'zyn_text',
-#                                       'id_discipline', 'type', 'zyn_index'],
-#                              index=None)
-#     match_index = 0
-#     for index, sample in competences.iterrows():
-#         similar_docs = most_similar(sample['vectors'], zyn, topn=topn)[['full_text', 'similarity',
-#                                                                         'zyn_text', 'id_discipline',
-#                                                                         'type', 'zyn_index']]
-#         similar_docs['full_text_match'] = sample['full_text_match']
-#         df_result = pd.concat([df_result, similar_docs], ignore_index=True)
-#         match_index += 1
-#         print(index)
-#         print(match_index)
-#     return df_result
-#
-#
-# def matching_parts(competence, zyn, part, topn=5):
-#
-#     zyn['full_text'] = zyn[part]
-#     zyn['processed_text'] = zyn['full_text'].apply(lambda text: process_text(str(text))['lemmatized_text_pos_tags'])
-#     zyn = get_vectorized_avg_w2v_corpus(zyn, word2vec.wv)
-#
-#     competences = pd.DataFrame(columns=['full_text_match'])
-#     competences['full_text_match'] = pd.Series(competence)
-#     # лемматизируем
-#     competences['processed_text'] = competences['full_text_match'].apply(lambda text: process_text(str(text))['lemmatized_text_pos_tags'])
-#     competences = get_vectorized_avg_w2v_corpus(competences, word2vec.wv)
-#     return similarity(competences, zyn, topn=topn)
 
 

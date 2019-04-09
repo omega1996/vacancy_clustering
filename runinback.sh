@@ -2,7 +2,7 @@
 
 source activate master8_env
 export PYTHONPATH="/home/mluser/master8_projects/clustering_vacancies/"
-cd /home/mluser/master8_projects/clustering_vacancies/
+cd /home/mluser/master8_projects/clustering_vacancies/scripts/
 chmod +x $1
 nohup python $1 $2 &
 

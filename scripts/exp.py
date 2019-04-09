@@ -12,7 +12,7 @@ labels = AffinityPropagation().fit_predict(X)
 
 co['label'] = labels
 
-co[['id', 'label']].to_pickle('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_prog.csv')
+co[['id', 'label']].to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_prog.csv', index=False)
 
 
 co = data[data.is_prog == False]
@@ -24,4 +24,4 @@ labels = AffinityPropagation().fit_predict(X)
 
 co['label'] = labels
 
-co[['id', 'label']].to_pickle('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_other.csv')
+co[['id', 'label']].to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_other.csv', index=False)

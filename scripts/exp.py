@@ -5,7 +5,7 @@ from sklearn.cluster import AffinityPropagation
 data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/df_vacancies_full_w2v_d2_ru.pkl')
 co = data[data.is_prog]
 
-X = np.array(co['w2v'])
+X = np.array(co['w2v_d2'])
 X = X.tolist()
 
 from sklearn.metrics.pairwise import cosine_distances

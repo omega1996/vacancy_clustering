@@ -114,6 +114,13 @@ sns.lineplot(x='width', y='size', data=t)
 plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_MeanShift_width.png', format='png', dpi=300)
 
 
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.clf()
+sns.lineplot(x=K, y=dis)
+plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_KMeans_train.png', format='png', dpi=300)
+
 
 import pandas as pd
 import numpy as np

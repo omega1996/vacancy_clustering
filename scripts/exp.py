@@ -3,19 +3,29 @@ import numpy as np
 from sklearn.cluster import AffinityPropagation
 
 data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/df_vacancies_full_w2v_d2_ru.pkl')
-co = data[data.is_prog]
 
-X = np.array(co['w2v_d2'])
-X = X.tolist()
+n = 100000
+is_run = True
+while is_run:
+    try:
+        print(n)
+        co = data[data.is_prog].sample(n)
 
-from sklearn.metrics.pairwise import cosine_distances
-word_cosine = cosine_distances(X)
+        X = np.array(co['w2v_d2'])
+        X = X.tolist()
 
-labels = AffinityPropagation(affinity='precomputed').fit_predict(word_cosine)
+        from sklearn.metrics.pairwise import cosine_distances
+        word_cosine = cosine_distances(X)
 
-co['label'] = labels
+        labels = AffinityPropagation(affinity='precomputed').fit_predict(word_cosine)
 
-co[['id', 'label']].to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_prog.csv', index=False)
+        co['label'] = labels
+
+        co[['id', 'label']].to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_prog.csv', index=False)
+        is_run = False
+    except:
+        n = n - 10000
+        is_run = True
 
 
 # co = data[data.is_prog == False]

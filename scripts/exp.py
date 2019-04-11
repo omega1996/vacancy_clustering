@@ -9,7 +9,7 @@ is_run = True
 while is_run:
     try:
         print(n)
-        co = data[data.is_prog].sample(n)
+        co = data[data.is_prog == False].sample(n)
 
         X = np.array(co['w2v_d2'])
         X = X.tolist()
@@ -21,7 +21,7 @@ while is_run:
 
         co['label'] = labels
 
-        co[['id', 'label']].to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_prog.csv', index=False)
+        co[['id', 'label']].to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_other.csv', index=False)
         is_run = False
     except:
         n = n - 10000

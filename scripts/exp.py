@@ -4,7 +4,7 @@ from sklearn.cluster import AffinityPropagation
 
 data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/df_vacancies_full_w2v_d2_ru.pkl')
 
-n = 100000
+n = 50000
 is_run = True
 while is_run:
     try:

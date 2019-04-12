@@ -25,17 +25,33 @@ co.to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacanci
 
 
 
-co = pd.read_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_result_20K_prog_sorted.csv')
+co = pd.read_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_result_20K_other_sorted.csv')
 
 corpus = []
 
+i = 11
 
-t = co[co.aff_d300_euclidean.isin([1153, 1001, 1070])]
-t['label_true'] = 3
-print(t.shape)
-t = t.sample(100)
-corpus.append(t)
+labels = [
+        [840],
+        [252, 804, 170, 471, 539, 424, 551, 700, 148, 98, 49, 618, 381],
+        [14, 245, 801],
+        [828, 880, 756, 688, 675, 153, 758],
+        [617, 403],
+        [528, 62, 739, 413],
+        [99, 827, 477, 173, 8],
+        [296, 829],
+        [157, 533, 812, 634, 873],
+        [752, 401],
+        [265, 438, 172]
+    ]
 
+for l in labels:
+    t = co[co.aff_d300_euclidean.isin(l)]
+    t['label_true'] = i
+    print(t.shape)
+    t = t.sample(100)
+    corpus.append(t)
+    i += 1
 
 t = pd.concat(corpus)
 corpus = t

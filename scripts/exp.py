@@ -4,7 +4,7 @@ from sklearn.cluster import AffinityPropagation
 
 data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/df_vacancies_full_w2v_ru.pkl')
 
-co = data[data.is_prog].sample(20000)
+co = data[data.is_prog == False].sample(20000)
 
 X = np.array(co['w2v'])
 X = X.tolist()
@@ -13,7 +13,7 @@ labels = AffinityPropagation().fit_predict(X)
 
 co['label'] = labels
 
-co[['id', 'label']].to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_result_20K_prog.csv', index=False)
+co[['id', 'label']].to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_result_20K_other.csv', index=False)
 
 # n = 50000
 # is_run = True

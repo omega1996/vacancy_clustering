@@ -50,3 +50,17 @@ df['k'] = range(10, 41, 1)
 
 co = df[['k', 'count', 'ars', 'homogeneity', 'completeness', 'v_measure']]
 co.to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_prog_k.csv', index=False)
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.clf()
+sns.lineplot(x=co.k, y=co['count'])
+plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_KMeans_k_count.png', format='png', dpi=300)
+
+sns.lineplot(x=co.k, y=co.homogeneity, label='homogeneity')
+sns.lineplot(x=co.k, y=co.completeness, label='completeness')
+sns.lineplot(x=co.k, y=co.v_measure, label='v_measure')
+sns.lineplot(x=co.k, y=co.ars, label='ars')
+plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_KMeans_k_metrics.png', format='png', dpi=300)

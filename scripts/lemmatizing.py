@@ -1,5 +1,6 @@
 import pandas as pd
 from util.preprocessing import process_text
+from util.preprocessing import complex_preprocess
 import swifter
 
 in_file = '/home/mluser/master8_projects/pycharm_project_755/data/new/vacancies_split.csv'

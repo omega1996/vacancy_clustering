@@ -7,29 +7,18 @@ from sklearn.metrics.cluster import adjusted_rand_score
 from sklearn.metrics.cluster import homogeneity_completeness_v_measure
 
 
-data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/df_vacancies_full_w2v_ru.pkl')
-re = pd.read_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_result_20K_prog_sorted.csv')
-tr = pd.read_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_1K_prog.csv')
+data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_42K_w2v.pkl')
+vectors_name = 'w2v_300'
 
-data.index = data.id
-re.index = re.id
-tr.index = tr.id
+co = data[data.is_prog]
 
-re['w2v'] = data.w2v
-tr['is_marked'] = True
-re['is_marked'] = tr.is_marked
-re.is_marked = re.is_marked.fillna(False)
-
-co = re
-co = co[['id', 'title', 'w2v', 'is_marked']]
-
-co_train = co[co.is_marked == False].sample(4000)
-co_test = co[co.is_marked]
+co_train = co[co.is_train].sample(4000)
+co_test = co[co.is_test]
 co_all = pd.concat([co_train, co_test])
 
 
 # Включена в обучения
-X = np.array(co_all['w2v'])
+X = np.array(co_all[vectors_name])
 X = X.tolist()
 
 labels = AffinityPropagation().fit_predict(X)
@@ -37,10 +26,10 @@ co_all['label_all'] = labels
 
 
 # Не включена в обучения
-X_train = np.array(co_train['w2v'])
+X_train = np.array(co_train[vectors_name])
 X_train = X_train.tolist()
 
-X_test = np.array(co_test['w2v'])
+X_test = np.array(co_test[vectors_name])
 X_test = X_test.tolist()
 
 model = AffinityPropagation()
@@ -49,9 +38,8 @@ labels = model.predict(X_test)
 co_test['label_test'] = labels
 
 co_test['label_all'] = co_all.label_all
-co_test['label_true'] = tr.label_true
 
-re = co_test[['id', 'title', 'label_test', 'label_all', 'label_true']]
+re = co_test[['id', 'label_test', 'label_all', 'label_true']]
 
 print('nunique')
 print(re.label_test.nunique())

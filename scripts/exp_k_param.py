@@ -25,7 +25,7 @@ count = []
 ars = []
 hcv = []
 
-for i in range(10, 41, 1):
+for i in range(10, 101, 1):
     print('k = ' + str(i))
     model = KMeans(n_clusters=i, n_jobs=-1)
     model.fit(X_train)
@@ -46,7 +46,7 @@ df['count'] = count
 df['ars'] = ars
 
 df.columns = ['homogeneity', 'completeness', 'v_measure', 'count', 'ars']
-df['k'] = range(10, 41, 1)
+df['k'] = range(10, 101, 1)
 
 co = df[['k', 'count', 'ars', 'homogeneity', 'completeness', 'v_measure']]
 co.to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_prog_k.csv', index=False)

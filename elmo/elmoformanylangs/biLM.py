@@ -25,7 +25,8 @@ from .utils import dict2namedtuple
 from collections import Counter
 import numpy as np
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)-15s %(levelname)s: %(message)s')
+logging.basicConfig(filename='/home/mluser/master8_projects/clustering_vacancies/data/corpus/train.log',
+                    level=logging.INFO, format='%(asctime)-15s %(levelname)s: %(message)s')
 
 
 def divide(data, valid_size):
@@ -340,7 +341,7 @@ def train_model(epoch, opt, model, optimizer,
     loss_forward, loss_backward = model.forward(w, c, masks)
 
     loss = (loss_forward + loss_backward) / 2.0
-    total_loss += loss_forward.data[0]
+    total_loss += loss_forward.data
     n_tags = sum(lens)
     total_tag += n_tags
     loss.backward()

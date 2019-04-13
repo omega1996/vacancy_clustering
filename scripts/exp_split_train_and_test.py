@@ -7,8 +7,8 @@ from sklearn.metrics.cluster import adjusted_rand_score
 from sklearn.metrics.cluster import homogeneity_completeness_v_measure
 
 
-data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_42K_w2v.pkl')
-vectors_name = 'w2v_300'
+data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_42K_elmo.pkl')
+vectors_name = 'elmo_300'
 
 co = data[data.is_prog]
 

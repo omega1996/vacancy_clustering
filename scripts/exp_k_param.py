@@ -59,6 +59,7 @@ plt.clf()
 sns.lineplot(x=co.k, y=co['count'])
 plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_KMeans_k_count.png', format='png', dpi=300)
 
+plt.clf()
 sns.lineplot(x=co.k, y=co.homogeneity, label='homogeneity')
 sns.lineplot(x=co.k, y=co.completeness, label='completeness')
 sns.lineplot(x=co.k, y=co.v_measure, label='v_measure')

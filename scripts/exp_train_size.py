@@ -52,3 +52,17 @@ df['size'] = range(10000, 999, -500)
 
 co = df[['size', 'count', 'ars', 'homogeneity', 'completeness', 'v_measure']]
 co.to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_prog_size.csv', index=False)
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.clf()
+sns.lineplot(x=co['size'], y=co['count'])
+plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_Aff_size_count.png', format='png', dpi=300)
+
+plt.clf()
+sns.lineplot(x=co['size'], y=co.homogeneity, label='homogeneity')
+sns.lineplot(x=co['size'], y=co.completeness, label='completeness')
+sns.lineplot(x=co['size'], y=co.v_measure, label='v_measure')
+sns.lineplot(x=co['size'], y=co.ars, label='ars')
+plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_Aff_size_metrics.png', format='png', dpi=300)

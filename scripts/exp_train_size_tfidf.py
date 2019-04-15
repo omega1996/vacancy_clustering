@@ -7,10 +7,10 @@ from sklearn.metrics.cluster import adjusted_rand_score
 from sklearn.metrics.cluster import homogeneity_completeness_v_measure
 
 
-data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_42K_w2v.pkl')
-vectors_name = 'w2v_300'
+data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_42K_tfidf.pkl')
+vectors_name = 'tfidf_300'
 
-co = data[data.is_prog == False]
+co = data[data.is_prog]
 co_train = co[co.is_train]
 
 count = []
@@ -51,18 +51,18 @@ df.columns = ['homogeneity', 'completeness', 'v_measure', 'count', 'ars']
 df['size'] = range(20000, 999, -500)
 
 co = df[['size', 'count', 'ars', 'homogeneity', 'completeness', 'v_measure']]
-co.to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_other_size.csv', index=False)
+co.to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_prog_size_tfidf.csv', index=False)
 
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 plt.clf()
 sns.lineplot(x=co['size'], y=co['count'])
-plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_Aff_size_count_other.png', format='png', dpi=300)
+plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_Aff_size_count_tfidf.png', format='png', dpi=300)
 
 plt.clf()
 sns.lineplot(x=co['size'], y=co.homogeneity, label='homogeneity')
 sns.lineplot(x=co['size'], y=co.completeness, label='completeness')
 sns.lineplot(x=co['size'], y=co.v_measure, label='v_measure')
 sns.lineplot(x=co['size'], y=co.ars, label='ars')
-plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_Aff_size_metrics_other.png', format='png', dpi=300)
+plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_Aff_size_metrics_tfidf.png', format='png', dpi=300)

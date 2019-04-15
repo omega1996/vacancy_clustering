@@ -14,7 +14,6 @@ nohup python -m elmoformanylangs.biLM train \
     --max_epoch 10 \
     --max_sent_len 20 \
     --max_vocab_size 150000 \
-    --min_count 3 \
-    --gpu 0 &
+    --min_count 3 &
 
 ps -A | grep python

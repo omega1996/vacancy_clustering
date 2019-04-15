@@ -10,7 +10,7 @@ from sklearn.metrics.cluster import homogeneity_completeness_v_measure
 data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_42K_w2v.pkl')
 vectors_name = 'w2v_300'
 
-co = data[data.is_prog == False]
+co = data[data.is_prog]
 co_train = co[co.is_train]
 
 count = []
@@ -22,17 +22,15 @@ for i in range(20000, 999, -500):
     co = co.sample(i)
     co_train = co_train.sample(i)
     co_test = co[co.is_test]
+    co_all = pd.concat([co_train, co_test])
 
-    X_train = np.array(co_train[vectors_name])
-    X_train = X_train.tolist()
-
-    X_test = np.array(co_test[vectors_name])
-    X_test = X_test.tolist()
+    X_all = np.array(co_all[vectors_name])
+    X_all = X_all.tolist()
 
     model = AffinityPropagation()
-    model.fit(X_train)
-    labels = model.predict(X_test)
-    co_test['label_test'] = labels
+    labels = model.fit_predict(X_all)
+    co_all['label_test'] = labels
+    co_test = co_all[co_all.is_test]
 
     count.append(co_test.label_test.nunique())
     ars.append(adjusted_rand_score(co_test.label_true, co_test.label_test))
@@ -51,18 +49,18 @@ df.columns = ['homogeneity', 'completeness', 'v_measure', 'count', 'ars']
 df['size'] = range(20000, 999, -500)
 
 co = df[['size', 'count', 'ars', 'homogeneity', 'completeness', 'v_measure']]
-co.to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_other_size.csv', index=False)
+co.to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_prog_size_in.csv', index=False)
 
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 plt.clf()
 sns.lineplot(x=co['size'], y=co['count'])
-plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_Aff_size_count_other.png', format='png', dpi=300)
+plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_Aff_size_count_prog_in.png', format='png', dpi=300)
 
 plt.clf()
 sns.lineplot(x=co['size'], y=co.homogeneity, label='homogeneity')
 sns.lineplot(x=co['size'], y=co.completeness, label='completeness')
 sns.lineplot(x=co['size'], y=co.v_measure, label='v_measure')
 sns.lineplot(x=co['size'], y=co.ars, label='ars')
-plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_Aff_size_metrics_other.png', format='png', dpi=300)
+plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_Aff_size_metrics_prog_in.png', format='png', dpi=300)

@@ -7,12 +7,12 @@ from sklearn.metrics.cluster import adjusted_rand_score
 from sklearn.metrics.cluster import homogeneity_completeness_v_measure
 
 
-data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_42K_elmo.pkl')
-vectors_name = 'elmo_300'
+data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_13K_w2v.pkl')
+vectors_name = 'w2v_300'
 
 co = data[data.is_prog]
 
-co_train = co[co.is_train].sample(4000)
+co_train = co[co.is_test == False].sample(4000)
 co_test = co[co.is_test]
 co_all = pd.concat([co_train, co_test])
 
@@ -54,3 +54,16 @@ print()
 print('homogeneity_completeness_v_measure')
 print(homogeneity_completeness_v_measure(re.label_true, re.label_test))
 print(homogeneity_completeness_v_measure(re.label_true, re.label_all))
+
+
+
+print('nunique')
+print(co_test.label_test.nunique())
+
+print()
+print('adjusted_rand_score')
+print(adjusted_rand_score(co_test.label_true, co_test.label_test))
+
+print()
+print('homogeneity_completeness_v_measure')
+print(homogeneity_completeness_v_measure(co_test.label_true, co_test.label_test))

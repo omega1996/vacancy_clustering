@@ -15,11 +15,13 @@ from util import clustering
 # for k in range(40, 101, 10):
 #     clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans_' + str(k))
 
-clustering.cluster(KMeans(n_clusters=20, n_jobs=-1), 'SpectralClustering')
+k = 16
+
+clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans')
 clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1), 'HDBSCAN')
-clustering.cluster(AgglomerativeClustering(n_clusters=20), 'Agglomerative')
-clustering.cluster(SpectralClustering(n_clusters=20, n_jobs=-1), 'SpectralClustering')
-clustering.cluster(SpectralClustering(n_clusters=20, n_jobs=-1, assign_labels='discretize'), 'SpectralClustering')
+clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative')
+clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1), 'SpectralClustering')
+clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1, assign_labels='discretize'), 'SpectralClustering')
 clustering.cluster(AffinityPropagation(), 'AffinityPropagation')
-clustering.cluster(Birch(n_clusters=20), 'Birch')
-clustering.cluster_fit_pred(GaussianMixture(n_components=20), 'GaussianMixture')
+clustering.cluster(Birch(n_clusters=k), 'Birch')
+clustering.cluster_fit_pred(GaussianMixture(n_components=k), 'GaussianMixture')

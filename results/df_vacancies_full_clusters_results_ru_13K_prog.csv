@@ -251,15 +251,127 @@ KMeans_90,elmo,90,0.05132894588434676,0.16977270048647894,0.5094170329692163,0.2
 KMeans_90,fasttext,87,0.12361850878399053,0.32908303557258634,0.7527342822021971,0.4018382093288319,0.5239643214770381,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=90, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-KMeans_100,w2v,100,0.10260332262911585,0.3280325752470524,0.8076851123904332,0.40835942819836696,0.5424568256363237,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans_100,w2v,100,0.10260332262911584,0.3280325752470524,0.8076851123904332,0.40835942819836696,0.5424568256363237,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=100, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-KMeans_100,tfidf,88,0.15557771567961712,0.38964724736370954,0.8204528472751734,0.4533968271066924,0.5840417833065326,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans_100,tfidf,88,0.15557771567961712,0.3896472473637096,0.8204528472751734,0.4533968271066924,0.5840417833065326,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=100, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-KMeans_100,elmo,99,0.043568016887985034,0.16355756847458813,0.5193038149417487,0.26253437273570523,0.3487552884056248,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans_100,elmo,99,0.04356801688798504,0.16355756847458813,0.5193038149417487,0.26253437273570523,0.3487552884056248,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=100, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-KMeans_100,fasttext,98,0.1153480232854352,0.32237794578136286,0.769433331212663,0.40060103789290386,0.5268833108019181,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans_100,fasttext,98,0.1153480232854352,0.3223779457813629,0.7694333312126629,0.4006010378929039,0.5268833108019181,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=100, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
+SpectralClustering,w2v,16,0.3703166378834563,0.4668393879594687,0.5736726826569818,0.4877266567073528,0.5272199617614152,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+SpectralClustering,tfidf,16,0.5332053484987054,0.6860832695251187,0.7530857173771588,0.6982691286674979,0.7246422322121852,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+SpectralClustering,elmo,16,0.13210498658639042,0.21601735371789624,0.2924900957606749,0.2463071427223605,0.2674193355713339,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+SpectralClustering,fasttext,16,0.3345024245628317,0.3965016646942488,0.4802619580054778,0.4205798294144762,0.4484438781435953,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+HDBSCAN,w2v,2,0.04456271377586907,0.016810925199965927,0.019736302353324686,0.08769207336158162,0.03222085901116268,"HDBSCAN(algorithm='best', allow_single_cluster=False, alpha=1.0,
+    approx_min_span_tree=True, cluster_selection_method='eom',
+    core_dist_n_jobs=-1, gen_min_span_tree=False, leaf_size=40,
+    match_reference_implementation=False, memory=Memory(cachedir=None),
+    metric='euclidean', min_cluster_size=5, min_samples=None, p=None,
+    prediction_data=False)"
+HDBSCAN,tfidf,5,0.0020432624770702766,0.0017666270673901547,0.006006374259478828,0.348246382021036,0.011809071731097394,"HDBSCAN(algorithm='best', allow_single_cluster=False, alpha=1.0,
+    approx_min_span_tree=True, cluster_selection_method='eom',
+    core_dist_n_jobs=-1, gen_min_span_tree=False, leaf_size=40,
+    match_reference_implementation=False, memory=Memory(cachedir=None),
+    metric='euclidean', min_cluster_size=5, min_samples=None, p=None,
+    prediction_data=False)"
+HDBSCAN,elmo,3,-0.0031143302149421893,0.0093194986961719,0.013654331591601841,0.11397082399090573,0.02438697003638694,"HDBSCAN(algorithm='best', allow_single_cluster=False, alpha=1.0,
+    approx_min_span_tree=True, cluster_selection_method='eom',
+    core_dist_n_jobs=-1, gen_min_span_tree=False, leaf_size=40,
+    match_reference_implementation=False, memory=Memory(cachedir=None),
+    metric='euclidean', min_cluster_size=5, min_samples=None, p=None,
+    prediction_data=False)"
+HDBSCAN,fasttext,4,0.02514458754980779,0.014666455707264625,0.019778865142621928,0.1180729541561838,0.03388201982570966,"HDBSCAN(algorithm='best', allow_single_cluster=False, alpha=1.0,
+    approx_min_span_tree=True, cluster_selection_method='eom',
+    core_dist_n_jobs=-1, gen_min_span_tree=False, leaf_size=40,
+    match_reference_implementation=False, memory=Memory(cachedir=None),
+    metric='euclidean', min_cluster_size=5, min_samples=None, p=None,
+    prediction_data=False)"
+Agglomerative,w2v,16,0.5052339362151939,0.5173842601716995,0.6101289384733423,0.5369609898702532,0.571211429297808,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+            connectivity=None, linkage='ward', memory=None, n_clusters=16,
+            pooling_func=<function mean at 0x7f15903e8d90>)"
+Agglomerative,tfidf,16,0.5116977856209222,0.5856125041886969,0.6102001929363579,0.6026013678062246,0.6063769750987605,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+            connectivity=None, linkage='ward', memory=None, n_clusters=16,
+            pooling_func=<function mean at 0x7f15903e8d90>)"
+Agglomerative,elmo,16,0.1299422848399712,0.2132996934559934,0.28918685422683865,0.2439642039202489,0.2646576034973857,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+            connectivity=None, linkage='ward', memory=None, n_clusters=16,
+            pooling_func=<function mean at 0x7f15903e8d90>)"
+Agglomerative,fasttext,16,0.2999825396213826,0.40063198421043145,0.4932249285711413,0.4241856968145117,0.4561075579962629,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+            connectivity=None, linkage='ward', memory=None, n_clusters=16,
+            pooling_func=<function mean at 0x7f15903e8d90>)"
+SpectralClustering,w2v,16,0.3234231417349168,0.4744103456471642,0.59665502183854,0.4947128474032069,0.5409228420408692,"SpectralClustering(affinity='rbf', assign_labels='kmeans', coef0=1, degree=3,
+          eigen_solver=None, eigen_tol=0.0, gamma=1.0, kernel_params=None,
+          n_clusters=16, n_init=10, n_jobs=-1, n_neighbors=10,
+          random_state=None)"
+SpectralClustering,tfidf,16,0.3790540595592968,0.5699460912952278,0.6516508226688068,0.586331523286958,0.6172679614613071,"SpectralClustering(affinity='rbf', assign_labels='kmeans', coef0=1, degree=3,
+          eigen_solver=None, eigen_tol=0.0, gamma=1.0, kernel_params=None,
+          n_clusters=16, n_init=10, n_jobs=-1, n_neighbors=10,
+          random_state=None)"
+SpectralClustering,elmo,16,0.07260080146999143,0.16788159357262672,0.2255404639155872,0.202511584117679,0.21340655576834044,"SpectralClustering(affinity='rbf', assign_labels='kmeans', coef0=1, degree=3,
+          eigen_solver=None, eigen_tol=0.0, gamma=1.0, kernel_params=None,
+          n_clusters=16, n_init=10, n_jobs=-1, n_neighbors=10,
+          random_state=None)"
+SpectralClustering,fasttext,16,0.3591898188237312,0.4663308587924442,0.5654707632592916,0.4872352259863736,0.5234458204664625,"SpectralClustering(affinity='rbf', assign_labels='kmeans', coef0=1, degree=3,
+          eigen_solver=None, eigen_tol=0.0, gamma=1.0, kernel_params=None,
+          n_clusters=16, n_init=10, n_jobs=-1, n_neighbors=10,
+          random_state=None)"
+SpectralClustering,w2v,16,0.3380785030477996,0.4365894373490513,0.5492103510064802,0.4585183433365231,0.499783367686954,"SpectralClustering(affinity='rbf', assign_labels='discretize', coef0=1,
+          degree=3, eigen_solver=None, eigen_tol=0.0, gamma=1.0,
+          kernel_params=None, n_clusters=16, n_init=10, n_jobs=-1,
+          n_neighbors=10, random_state=None)"
+SpectralClustering,tfidf,16,0.3981510694500117,0.5733824217840129,0.6669590245141259,0.5890780006519372,0.625603992247924,"SpectralClustering(affinity='rbf', assign_labels='discretize', coef0=1,
+          degree=3, eigen_solver=None, eigen_tol=0.0, gamma=1.0,
+          kernel_params=None, n_clusters=16, n_init=10, n_jobs=-1,
+          n_neighbors=10, random_state=None)"
+SpectralClustering,elmo,13,0.14705432070962826,0.21945381712034184,0.2431332478145556,0.2546279038577169,0.2487478544324,"SpectralClustering(affinity='rbf', assign_labels='discretize', coef0=1,
+          degree=3, eigen_solver=None, eigen_tol=0.0, gamma=1.0,
+          kernel_params=None, n_clusters=16, n_init=10, n_jobs=-1,
+          n_neighbors=10, random_state=None)"
+SpectralClustering,fasttext,16,0.3676052048413552,0.4704809310884661,0.5684748028793971,0.4912799754557497,0.5270658701714862,"SpectralClustering(affinity='rbf', assign_labels='discretize', coef0=1,
+          degree=3, eigen_solver=None, eigen_tol=0.0, gamma=1.0,
+          kernel_params=None, n_clusters=16, n_init=10, n_jobs=-1,
+          n_neighbors=10, random_state=None)"
+AffinityPropagation,w2v,310,0.03879490048428149,0.2267162231432589,0.9322993007683652,0.38023892449610175,0.5401693857124845,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"
+AffinityPropagation,tfidf,428,0.029315064754682364,0.16769660859565105,0.8801604630626142,0.3485741129280973,0.4993774223356002,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"
+AffinityPropagation,elmo,356,0.013356360991161522,0.09176078918789876,0.7006265756836464,0.28038698412519203,0.4004971604922119,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"
+AffinityPropagation,fasttext,340,0.040723146682525836,0.20099672346238448,0.8867530177187117,0.3623622823888423,0.5144854880699619,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"
+Birch,w2v,16,0.5228237694472294,0.46331202123966997,0.4856797250603588,0.4949001339760948,0.4902465796881288,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=16,
+   threshold=0.5)"
+Birch,tfidf,1,0.0,2.616150013596189e-16,1.2589706883110241e-16,1.0,2.5179413766220473e-16,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=16,
+   threshold=0.5)"
+Birch,elmo,16,0.16408709910253566,0.2371511107776124,0.3033489287452064,0.2675474519238705,0.2843256173195489,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=16,
+   threshold=0.5)"
+Birch,fasttext,1,0.0,2.616150013596189e-16,1.2589706883110241e-16,1.0,2.5179413766220473e-16,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=16,
+   threshold=0.5)"
+GaussianMixture,w2v,16,0.3800130198578909,0.47377723720512277,0.5809258006838399,0.4944298747205518,0.5341992001781817,"GaussianMixture(covariance_type='full', init_params='kmeans', max_iter=100,
+        means_init=None, n_components=16, n_init=1, precisions_init=None,
+        random_state=None, reg_covar=1e-06, tol=0.001, verbose=0,
+        verbose_interval=10, warm_start=False, weights_init=None)"
+GaussianMixture,tfidf,16,0.3159325134039126,0.566037324327872,0.5834545136752894,0.6094494231594328,0.5961687371787746,"GaussianMixture(covariance_type='full', init_params='kmeans', max_iter=100,
+        means_init=None, n_components=16, n_init=1, precisions_init=None,
+        random_state=None, reg_covar=1e-06, tol=0.001, verbose=0,
+        verbose_interval=10, warm_start=False, weights_init=None)"
+GaussianMixture,elmo,16,0.14669108352495175,0.22634741179565707,0.30936640642499164,0.2561883887151529,0.2802772847676982,"GaussianMixture(covariance_type='full', init_params='kmeans', max_iter=100,
+        means_init=None, n_components=16, n_init=1, precisions_init=None,
+        random_state=None, reg_covar=1e-06, tol=0.001, verbose=0,
+        verbose_interval=10, warm_start=False, weights_init=None)"
+GaussianMixture,fasttext,16,0.4169836320100046,0.45011158200983475,0.5308804011967296,0.47237832597824014,0.49992367555698697,"GaussianMixture(covariance_type='full', init_params='kmeans', max_iter=100,
+        means_init=None, n_components=16, n_init=1, precisions_init=None,
+        random_state=None, reg_covar=1e-06, tol=0.001, verbose=0,
+        verbose_interval=10, warm_start=False, weights_init=None)"

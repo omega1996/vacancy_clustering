@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+from sklearn import clone
 
 from sklearn.metrics.cluster import adjusted_rand_score
 from sklearn.metrics.cluster import adjusted_mutual_info_score
@@ -15,14 +15,16 @@ def cluster(model, cname):
 
     for name in ['w2v', 'tfidf', 'elmo', 'fasttext']:
 
-        data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_13K_w2v.pkl')
-        vectors_name = 'w2v_300'
+        m = clone(model)
+
+        data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_13K_' + name + '.pkl')
+        vectors_name = str(name) + '_300'
         co = data[data.is_prog]
 
         X = np.array(co[vectors_name])
         X = X.tolist()
 
-        labels = model.fit_predict(X)
+        labels = m.fit_predict(X)
 
         co['label_test'] = labels
 

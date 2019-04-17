@@ -30,20 +30,10 @@ def cluster(model, cname):
         print('-----------------------------------')
         print(name)
 
-        print('nunique')
-        print(co[co.is_test].label_test.nunique())
-
-        print()
-        print('adjusted_rand_score')
-        print(adjusted_rand_score(co[co.is_test].label_true, co[co.is_test].label_test))
-
-        print()
-        print('adjusted_mutual_info_score')
-        print(adjusted_mutual_info_score(co[co.is_test].label_true, co[co.is_test].label_test))
-
-        print()
-        print('homogeneity_completeness_v_measure')
-        print(homogeneity_completeness_v_measure(co[co.is_test].label_true, co[co.is_test].label_test))
+        print('nunique: ' + str(co[co.is_test].label_test.nunique()))
+        print('adjusted_rand_score: ' + str(adjusted_rand_score(co[co.is_test].label_true, co[co.is_test].label_test)))
+        print('adjusted_mutual_info_score: ' + str(adjusted_mutual_info_score(co[co.is_test].label_true, co[co.is_test].label_test)))
+        print('homogeneity_completeness_v_measure: ' + str(homogeneity_completeness_v_measure(co[co.is_test].label_true, co[co.is_test].label_test)))
 
         hcv = homogeneity_completeness_v_measure(co[co.is_test].label_true, co[co.is_test].label_test)
 

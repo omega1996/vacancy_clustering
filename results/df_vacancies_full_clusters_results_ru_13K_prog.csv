@@ -1,13 +1,265 @@
 name,vec,n,ARI,AMI,Homogeneity,completeness,v_measure,model
-KMeans,w2v,20,0.30694953722738083,0.4401993661625089,0.6010003549215395,0.46549443394306533,0.5246388879435963,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans_16,w2v,16,0.3733314288354971,0.4603115881357752,0.5701895136574964,0.4815078437895581,0.5221097520661204,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_16,tfidf,16,0.3487438989548874,0.4434845593930341,0.5463151803682784,0.4653513895764368,0.5025935142741209,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_16,elmo,16,0.366094753935319,0.4579701596721951,0.56195829305922,0.4792796957663432,0.5173364833424604,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_16,fasttext,16,0.3629315888754904,0.4599750233144966,0.5662705390371446,0.4811394580224946,0.5202453690747504,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_17,w2v,17,0.3741379032725919,0.461892628167109,0.5842108278628514,0.48397065026743,0.5293873747913332,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=17, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_17,tfidf,17,0.3770551064877019,0.4547663277085392,0.5741587739337473,0.4770545002266594,0.5211217051430034,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=17, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_17,elmo,17,0.3776959068731796,0.4652669305547873,0.5828103802238824,0.4872098812405745,0.5307394380477044,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=17, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_17,fasttext,17,0.3743152703624231,0.4629197083794432,0.5816529710889582,0.4849113501730253,0.5288947359671101,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=17, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_18,w2v,18,0.30988787025849396,0.4520902927595789,0.5891551291590498,0.4751710574502661,0.5260595280787079,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=18, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_18,tfidf,18,0.3835069297567348,0.4646921770763994,0.5938943102638721,0.4875804091739824,0.5355117888563804,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=18, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_18,elmo,18,0.3824240805981208,0.4658471203451296,0.5973860034062974,0.4886086787154658,0.5375495674383732,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=18, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_18,fasttext,18,0.3796180527583592,0.4621373920600779,0.5947569912314423,0.4850240421256819,0.5343147009587721,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=18, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_19,w2v,19,0.39499486513420595,0.4755327967464469,0.6201553208096071,0.498733276736183,0.5528559249082821,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=19, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_19,tfidf,19,0.3845739839827291,0.4612100781864848,0.6070064813961639,0.4851051670809433,0.5392525223726228,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=19, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_19,elmo,19,0.378157311924492,0.452246895760734,0.5932661537356372,0.4765104206079062,0.5285169094723866,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=19, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_19,fasttext,19,0.303039961834114,0.4458659915512127,0.5929075170928683,0.4701222694722028,0.5244237387242124,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=19, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_20,w2v,20,0.30113782882284984,0.4345673840024903,0.5924350859152218,0.4601757703408911,0.5179963144360282,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=20, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-KMeans,tfidf,20,0.3038639186324701,0.4410019400166686,0.601659491246633,0.46627091693110884,0.5253831532759965,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans_20,tfidf,20,0.3033053943324918,0.4473598235493644,0.6057472975904035,0.4723963422879261,0.5308250165345229,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=20, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-KMeans,elmo,20,0.2981532955113148,0.43823039041242523,0.5910236063346714,0.46377799698236716,0.5197256876614785,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans_20,elmo,20,0.3699254155911926,0.4377643786965642,0.5886735525700343,0.4635212679447306,0.5186543521651225,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=20, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-KMeans,fasttext,20,0.3813101405564474,0.4508955243512038,0.6042806002239464,0.4760469685757558,0.5325531925939077,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans_20,fasttext,20,0.2973804815888313,0.43012697651439386,0.5889890298148708,0.4559876545607362,0.5140243419455105,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=20, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_21,w2v,21,0.31332134350234503,0.450645270251985,0.6219804253309624,0.4763375793579686,0.5395024918927768,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=21, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_21,tfidf,21,0.30053121603667216,0.43069275996866657,0.5969104038171396,0.4573668220536431,0.5179036552157543,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=21, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_21,elmo,21,0.30963117202908697,0.44252205946806783,0.6099344287391225,0.4686501343145946,0.5300388337515066,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=21, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_21,fasttext,21,0.3000181869867681,0.4332522046103452,0.6005742610887309,0.4597922767518397,0.5208376481341961,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=21, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_22,w2v,22,0.2997686452236785,0.4340975701405158,0.6108577450219269,0.4614955610391621,0.5257747351747374,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=22, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_22,tfidf,22,0.2725369878042367,0.4378526985957648,0.617994160957543,0.4649325076581102,0.5306464108772195,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=22, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_22,elmo,22,0.301417546006938,0.440155123069138,0.6176105871812761,0.4672394722318642,0.5320035562435179,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=22, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_22,fasttext,22,0.2736485320093794,0.4381060777441729,0.6175749790283208,0.4651983413513884,0.5306648224456513,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=22, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_23,w2v,23,0.2730387229180737,0.4391183986953088,0.6322011040462377,0.4669007788803482,0.5371207027727757,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=23, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_23,tfidf,23,0.2727686779041559,0.4341469915435374,0.6236338726346773,0.4622379584354932,0.5309415712787661,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=23, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_23,elmo,23,0.3022758807978821,0.4373828702948809,0.6227191204021092,0.4654489635242203,0.5327191147015827,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=23, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_23,fasttext,23,0.299489392674992,0.4381828741249485,0.6246571308412667,0.4662318280185046,0.533940752872456,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=23, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_24,w2v,24,0.3025502758467988,0.43796612593201584,0.6352137555528695,0.4668172822171208,0.5381495599146835,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=24, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_24,tfidf,24,0.30242524113217417,0.43731584065449497,0.6328076631349925,0.4662254233408638,0.5368919721689124,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=24, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_24,elmo,24,0.3097097417065796,0.4437230520980026,0.639888760843773,0.4722889092618114,0.543460587334229,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=24, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_24,fasttext,24,0.30889035475305865,0.4421387478479721,0.6398525531218039,0.4707911049700608,0.5424546177478149,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=24, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_25,w2v,25,0.3044645317480161,0.4310630965520713,0.6348040760436274,0.4610920533411871,0.5341803972911578,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=25, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_25,tfidf,25,0.25386778052243697,0.4119623634680673,0.6137157124141583,0.4428323582721607,0.5144549193308371,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=25, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_25,elmo,25,0.2757645890439845,0.4266549765200758,0.6304756573799525,0.4568500583197911,0.529800475946396,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=25, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_25,fasttext,25,0.26168179273974873,0.4274172629898187,0.6346827588520603,0.4574659541637088,0.5316963713994153,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=25, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_26,w2v,26,0.25506304059910423,0.4132970329500984,0.6253492957761725,0.4448811911908125,0.5198994852102763,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=26, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_26,tfidf,26,0.26420128927479625,0.4233338601390272,0.6366489955886088,0.4544345766794524,0.5303265930441999,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=26, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_26,elmo,26,0.2557903035830871,0.4214859523014327,0.6357346857842308,0.4526545244841606,0.5287964621052904,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=26, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_26,fasttext,26,0.2787883164314475,0.4272596103149236,0.6393791046126356,0.4582542213425706,0.5338725907797927,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=26, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_27,w2v,27,0.2544281555093303,0.41101204080281895,0.6293508728548682,0.443588108425922,0.5203885180733012,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=27, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_27,tfidf,27,0.24286405350373305,0.4229768029685079,0.6481440064401688,0.4548101604509489,0.5345326005617685,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=27, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_27,elmo,27,0.2530896959446217,0.4144332453029885,0.6343350071142941,0.4467615160104109,0.524275979757576,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=27, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_27,fasttext,27,0.2580188560295331,0.4218620900974183,0.6447160233306258,0.4538031417200136,0.5326701002821094,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=27, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_28,w2v,28,0.2582354982934562,0.4173580018114593,0.6458829323314763,0.45035299272485263,0.5306801298460229,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=28, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_28,tfidf,28,0.2505560680253889,0.4140726372232729,0.6416249005145424,0.4472495391722774,0.5270882125934082,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=28, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_28,elmo,28,0.25510727340158484,0.4139026361043926,0.6398502796464587,0.4471316954467173,0.5264067793688171,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=28, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_28,fasttext,28,0.26191486658654484,0.4138753610671497,0.6405255848028764,0.44709616955139264,0.5266105322342621,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=28, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_29,w2v,29,0.2691946985769757,0.4075913098649251,0.636747097376866,0.4420587097390653,0.5218355304353006,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=29, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_29,tfidf,29,0.2759891635604798,0.422803557133609,0.6559793692613473,0.4564149581748219,0.5382961581169045,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=29, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_29,elmo,29,0.23091602070244066,0.4121130648893337,0.6497054141600872,0.4460582790557799,0.5289579874342102,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=29, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_29,fasttext,29,0.22077958137817152,0.3938491949239874,0.6255107868464158,0.4288822929097724,0.5088624074894725,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=29, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_30,w2v,30,0.2307219626684532,0.4000271147781528,0.6399762930269808,0.43553074562746574,0.5183217627932166,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=30, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_30,tfidf,30,0.2270997641204944,0.4166131453364939,0.6652014236563231,0.4510770614076088,0.5376025919013696,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=30, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_30,elmo,30,0.2621206947537663,0.4160130657998127,0.6574916278873554,0.4506572962738664,0.5347718034752345,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=30, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_30,fasttext,30,0.25300049239237965,0.4026383839066597,0.639592208083402,0.4380870264833472,0.520000830699538,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=30, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_40,w2v,40,0.1962371717131012,0.3843008956821058,0.6817220138475236,0.4280404099176229,0.5258865573536748,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=40, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_40,tfidf,40,0.18548797823770397,0.3911437119110801,0.6953160197558751,0.4343656021400955,0.5347017349756046,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=40, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_40,elmo,40,0.19260020235161385,0.3873219729374888,0.6894487911527646,0.4308725814312428,0.530320295012253,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=40, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_40,fasttext,40,0.18973832057269613,0.3868288453788952,0.6861030430485161,0.4303484290357728,0.5289318418495498,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=40, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_50,w2v,50,0.15785251736772618,0.3823575306389157,0.7346871092378466,0.432565443373837,0.5445269825068202,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=50, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_50,tfidf,50,0.16111924011781426,0.3766237544875705,0.7249196412752901,0.4273503418175432,0.5377119269526042,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=50, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_50,elmo,50,0.1610621161229193,0.3725059243848281,0.7177526085777065,0.4235665355678,0.5327449160377028,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=50, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_50,fasttext,50,0.16924900516755131,0.3704746199768519,0.7117116611329349,0.4217323259684349,0.5296279616534894,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=50, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_60,w2v,60,0.14000107087612124,0.3562938908565008,0.7303158637496749,0.41442289848364816,0.5287837313611305,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=60, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_60,tfidf,60,0.1461661363154693,0.3683396845841241,0.7539698652320022,0.42561433199798737,0.544090674139073,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=60, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_60,elmo,60,0.13967236193165686,0.3620924791566831,0.7430788888625345,0.4197154161721966,0.5364347997531629,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=60, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_60,fasttext,60,0.15286402435142454,0.37288161852888974,0.7558842620418325,0.4295195718349787,0.5477746491289762,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=60, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_70,w2v,70,0.12481798132233025,0.3396868593044761,0.7428581680082256,0.4049389365944342,0.5241556985768394,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=70, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_70,tfidf,70,0.12375051049983425,0.3489638338067139,0.7598728741438693,0.4132947990964603,0.5353906590193015,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=70, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_70,elmo,70,0.14589318348318386,0.35465004602759176,0.7614102337523326,0.4184015711099963,0.5400441608539079,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=70, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_70,fasttext,70,0.13079578258142593,0.3503764266324177,0.7583442622994692,0.4145381936827139,0.5360514330824769,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=70, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_80,w2v,80,0.12539066221198364,0.3467247996500645,0.7823331745786306,0.4160661886560221,0.5432285633522356,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=80, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_80,tfidf,80,0.1179598693285366,0.3443290199431279,0.7843691445383446,0.4142821612155035,0.5421929510780209,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=80, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_80,elmo,80,0.12905948500033196,0.3513520067475619,0.7888641340663309,0.4202164188547548,0.5483400763984444,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=80, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_80,fasttext,80,0.12526781589628114,0.3516432453742841,0.7937026209095579,0.420624568340415,0.5498531619257264,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=80, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_90,w2v,90,0.10418000844480392,0.3262262753782797,0.7829661287593385,0.4027245158431265,0.5318750832041711,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=90, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_90,tfidf,90,0.1085528594337761,0.33076359004539146,0.7892271932991569,0.4067150635031394,0.5367994754183767,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=90, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_90,elmo,90,0.10670347041409464,0.3310667032829676,0.7868535493354089,0.4066290927026971,0.5361746096445339,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=90, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_90,fasttext,90,0.1014676621757352,0.32711804822180995,0.7830897133551925,0.4032878703958415,0.5323947234899538,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=90, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_100,w2v,100,0.0970506664294502,0.31557610819777887,0.7892923711139195,0.3975869207461792,0.5288024242260078,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=100, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_100,tfidf,100,0.1021525105245665,0.32670429460257316,0.8048947742618474,0.4071229197676003,0.5407365127050779,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=100, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_100,elmo,100,0.09413160202897183,0.3194290870472102,0.7955729927200152,0.40076951830297813,0.5330269586334732,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=100, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_100,fasttext,100,0.09917692330364268,0.3259041414044667,0.8067351837626906,0.4066478437861834,0.5407313528132149,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=100, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"

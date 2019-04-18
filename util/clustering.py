@@ -17,7 +17,7 @@ def cluster(model, cname):
 
         m = clone(model)
 
-        data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_13K_' + name + '.pkl')
+        data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_13K_' + name + '_wmc.pkl')
         vectors_name = str(name) + '_768'
         co = data[data.is_prog]
 

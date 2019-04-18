@@ -14,7 +14,7 @@ print('start: ' + str(datetime.now()))
 
 ctx = mx.gpu(0)
 bert_embedding = BertEmbedding(ctx=ctx, model='bert_12_768_12',
-                               dataset_name='wiki_cn_cased',
+                               dataset_name='wiki_multilingual_cased',
                                max_seq_length=500,
                                batch_size=20)
 vectors = bert_embedding(documents)
@@ -32,4 +32,4 @@ vectors = np.array(new_vectors)
 co['bert_768'] = vectors.tolist()
 co = co[['id', 'is_prog', 'is_test', 'label_true', 'title', 'bert_768']]
 
-co.to_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_13K_bert.pkl')
+co.to_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_13K_bert_wmc.pkl')

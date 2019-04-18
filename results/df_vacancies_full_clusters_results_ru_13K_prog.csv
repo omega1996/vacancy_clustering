@@ -263,16 +263,16 @@ KMeans_100,elmo,99,0.04356801688798504,0.16355756847458813,0.5193038149417487,0.
 KMeans_100,fasttext,98,0.1153480232854352,0.3223779457813629,0.7694333312126629,0.4006010378929039,0.5268833108019181,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=100, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-SpectralClustering,w2v,16,0.3703166378834563,0.4668393879594687,0.5736726826569818,0.4877266567073528,0.5272199617614152,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans,w2v,16,0.3703166378834563,0.4668393879594687,0.5736726826569818,0.4877266567073528,0.5272199617614152,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-SpectralClustering,tfidf,16,0.5332053484987054,0.6860832695251187,0.7530857173771588,0.6982691286674979,0.7246422322121852,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans,tfidf,16,0.5332053484987054,0.6860832695251187,0.7530857173771588,0.6982691286674979,0.7246422322121852,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-SpectralClustering,elmo,16,0.13210498658639042,0.21601735371789624,0.2924900957606749,0.2463071427223605,0.2674193355713339,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans,elmo,16,0.13210498658639042,0.21601735371789624,0.2924900957606749,0.2463071427223605,0.2674193355713339,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-SpectralClustering,fasttext,16,0.3345024245628317,0.3965016646942488,0.4802619580054778,0.4205798294144762,0.4484438781435953,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans,fasttext,16,0.3345024245628317,0.3965016646942488,0.4802619580054778,0.4205798294144762,0.4484438781435953,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
 HDBSCAN,w2v,2,0.04456271377586907,0.016810925199965927,0.019736302353324686,0.08769207336158162,0.03222085901116268,"HDBSCAN(algorithm='best', allow_single_cluster=False, alpha=1.0,

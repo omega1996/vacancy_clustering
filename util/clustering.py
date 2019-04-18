@@ -13,12 +13,12 @@ def cluster(model, cname):
     print('=====================================')
     print(cname)
 
-    for name in ['w2v', 'tfidf', 'elmo', 'fasttext']:
+    for name in ['bert']:
 
         m = clone(model)
 
         data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_13K_' + name + '.pkl')
-        vectors_name = str(name) + '_300'
+        vectors_name = str(name) + '_768'
         co = data[data.is_prog]
 
         X = np.array(co[vectors_name])

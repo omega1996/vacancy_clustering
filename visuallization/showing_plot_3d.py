@@ -14,7 +14,7 @@ for azim in range(0, 181, 30):
 
     ax = Axes3D(fig, azim=-azim)
 
-    ax.scatter(co.x, co.y, co.z, c=co.kmeans_k8, marker='o', s=1)
+    ax.scatter(co.x, co.y, co.z, c=co.label_test, marker='o', s=1)
     # ax.legend()
 
     ax.set_xlabel('X Label')

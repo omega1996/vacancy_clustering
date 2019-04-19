@@ -806,9 +806,18 @@ KMeans,bert,38,0.06761837749534927,0.16474973542167387,0.27221271675078,0.240625
     random_state=None, tol=0.0001, verbose=0)"
 AffinityPropagation,bert,525,0.01612027672057174,0.0958280434584402,0.6735500306627944,0.350062286164615,0.4606909465701941,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
           damping=0.5, max_iter=200, preference=None, verbose=False)"
-KMeans,w2v,38,0.33333757177609225,0.5448249536638069,0.6772852980396012,0.5895487006257214,0.63037883074314,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans,w2v,38,0.33333757177609225,0.5448249536638069,0.6772852980396012,0.5895487006257214,0.6303788307431399,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
 KMeans,tfidf,38,0.4524168177749897,0.6646045309127111,0.7511617801237785,0.695952381867937,0.7225039237067405,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans,w2v,22,0.35243489482403817,0.5297190971998049,0.6406529653811768,0.5774987658442471,0.6074387736081148,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=22, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans,tfidf,22,0.4116013253536081,0.6061808560970823,0.6557492606423925,0.6440603417983821,0.6498522432059345,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=22, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans,w2v_tfidf,38,0.21873895970405427,0.4487279561437195,0.5729344907083949,0.5026530666668831,0.535497601806718,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"

@@ -15,7 +15,7 @@ from util import clustering
 # for k in range(40, 101, 10):
 #     clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans_' + str(k))
 
-k = 16
+k = 38
 #
 clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans')
 # clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1, alpha=.5), 'HDBSCAN')

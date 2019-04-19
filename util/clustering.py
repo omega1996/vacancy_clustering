@@ -6,6 +6,8 @@ from sklearn.metrics.cluster import adjusted_rand_score
 from sklearn.metrics.cluster import adjusted_mutual_info_score
 from sklearn.metrics.cluster import homogeneity_completeness_v_measure
 
+from datetime import datetime
+
 
 def cluster(model, cname):
     re = []
@@ -13,14 +15,15 @@ def cluster(model, cname):
     print('=====================================')
     print(cname)
 
-    for name in ['bert']:
+    for name in ['w2v', 'tfidf']:
 
         m = clone(model)
 
-        data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_22K_' + name + '_wmc_1.pkl')
-        vectors_name = str(name) + '_768'
-        co = data[data.is_prog]
-        # co = data
+        print(str(datetime.now()))
+        data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_22K_' + name + '.pkl')
+        vectors_name = str(name) + '_300'
+        # co = data[data.is_prog]
+        co = data
 
         X = np.array(co[vectors_name])
         X = X.tolist()
@@ -29,6 +32,7 @@ def cluster(model, cname):
 
         co['label_test'] = labels
         print(co.shape)
+        print(str(datetime.now()))
 
         print()
         print('-----------------------------------')

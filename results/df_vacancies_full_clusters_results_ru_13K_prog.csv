@@ -775,5 +775,21 @@ AffinityPropagation,bert,506,0.004722746549267777,0.033721261364212336,0.6990006
 KMeans,bert,16,0.11665450573871275,0.1541083932101239,0.2231685883294655,0.18704545763170344,0.2035165355457257,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-AffinityPropagation,bert,318,0.015192088169350661,0.09142195405402864,0.6630464660051858,0.27129439305984704,0.38504318166146506,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+AffinityPropagation,bert,318,0.01519208816935066,0.09142195405402864,0.6630464660051858,0.27129439305984704,0.38504318166146506,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"
+KMeans_a,w2v,38,0.336965628590206,0.5610444985232078,0.6810159491069628,0.6008700970048387,0.6384375906780936,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_a,tfidf,38,0.4369462741594426,0.6526356186479793,0.715185965146769,0.6820476127813692,0.6982238158725114,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans_a,w2v_tfidf,38,0.2164769962675967,0.4596183611699908,0.5810028764413511,0.5085897589394551,0.5423900699717266,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans,w2v_tfidf,16,0.2053976653720901,0.3105800032705173,0.4010132750187134,0.3372823327496487,0.3663971217998193,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=16, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+AffinityPropagation_a,w2v,455,0.06411285668965452,0.3112044448103119,0.953347134106665,0.5003777403221507,0.6562915625892733,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"
+AffinityPropagation_a,tfidf,696,0.03571697464956958,0.1895802968498359,0.8585151744704531,0.4324139743100531,0.5751422670236371,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
           damping=0.5, max_iter=200, preference=None, verbose=False)"

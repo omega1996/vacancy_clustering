@@ -17,9 +17,10 @@ def cluster(model, cname):
 
         m = clone(model)
 
-        data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_13K_' + name + '_wmc.pkl')
+        data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_22K_' + name + '_wmc_1.pkl')
         vectors_name = str(name) + '_768'
         co = data[data.is_prog]
+        # co = data
 
         X = np.array(co[vectors_name])
         X = X.tolist()
@@ -27,6 +28,7 @@ def cluster(model, cname):
         labels = m.fit_predict(X)
 
         co['label_test'] = labels
+        print(co.shape)
 
         print()
         print('-----------------------------------')

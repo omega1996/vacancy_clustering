@@ -30,13 +30,13 @@ clustering.cluster(AffinityPropagation(), 'AffinityPropagation')
 #     clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1, alpha=d/10), 'HDBSCAN')
 
 
-from rake_nltk import Rake
-import numpy as np
-
-t = co[co.label_pred == 33]
-text = np.array(t.text)
-text = ' '.join(text)
-
-r = Rake(language='russian')
-r.extract_keywords_from_text(text)
-top = pd.Series(r.get_ranked_phrases())
+# from rake_nltk import Rake
+# import numpy as np
+#
+# t = co[co.label_pred == 33]
+# text = np.array(t.text)
+# text = ' '.join(text)
+#
+# r = Rake(language='russian')
+# r.extract_keywords_from_text(text)
+# top = pd.Series(r.get_ranked_phrases())

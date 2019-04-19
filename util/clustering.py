@@ -22,8 +22,8 @@ def cluster(model, cname):
         print(str(datetime.now()))
         data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_22K_' + name + '.pkl')
         vectors_name = str(name) + '_300'
-        # co = data[data.is_prog]
-        co = data
+        co = data[data.is_prog == False]
+        # co = data
 
         X = np.array(co[vectors_name])
         X = X.tolist()

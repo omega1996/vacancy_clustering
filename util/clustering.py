@@ -15,7 +15,7 @@ def cluster(model, cname):
     print('=====================================')
     print(cname)
 
-    for name in ['w2v_tfidf']:
+    for name in ['artm_80', 'artm_200']:
 
         m = clone(model)
 

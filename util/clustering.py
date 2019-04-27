@@ -15,15 +15,15 @@ def cluster(model, cname):
     print('=====================================')
     print(cname)
 
-    for name in ['artm_80', 'artm_200']:
+    for name in ['tfidf_80', 'tfidf_300', 'tfidf_500']:
 
         m = clone(model)
 
         print(str(datetime.now()))
         data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_22K_' + name + '.pkl')
         vectors_name = str(name)
-        co = data[data.is_prog]
-        # co = data
+        # co = data[data.is_prog]
+        co = data
 
         X = np.array(co[vectors_name])
         X = X.tolist()

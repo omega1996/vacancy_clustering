@@ -18,12 +18,12 @@ from util import clustering
 k = 38
 #
 # clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans')
-clustering.cluster_sparse(KMeans(n_clusters=k, n_jobs=-1), 'KMeans')
+# clustering.cluster_sparse(KMeans(n_clusters=k, n_jobs=-1), 'KMeans')
 # clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1, alpha=.5), 'HDBSCAN')
 # clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative')
 # clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1), 'SpectralClustering')
 # clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1, assign_labels='discretize'), 'SpectralClustering')
-# clustering.cluster(AffinityPropagation(), 'AffinityPropagation')
+clustering.cluster(AffinityPropagation(), 'AffinityPropagation')
 # clustering.cluster(Birch(n_clusters=None), 'Birch')
 # clustering.cluster_fit_pred(GaussianMixture(n_components=k), 'GaussianMixture')
 

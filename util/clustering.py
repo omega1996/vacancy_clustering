@@ -24,9 +24,8 @@ def cluster(model, cname, vectors_list):
         vectors_name = str(name)
 
         co = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/release/df_vacancies_full_ru_22K_info.pkl')
-        co[vectors_name] = data[vectors_name]
 
-        X = np.array(co[vectors_name])
+        X = np.array(data[vectors_name])
         X = X.tolist()
 
         labels = m.fit_predict(X)

@@ -54,9 +54,9 @@ def cluster(model, cname):
 
         re.append(a)
 
-    co = pd.read_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_13K_prog.csv')
+    co = pd.read_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_22K.csv')
     df = pd.DataFrame(re, columns=['name', 'vec', 'n', 'ARI', 'AMI', 'Homogeneity', 'completeness', 'v_measure', 'model'])
-    pd.concat([co, df]).to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_13K_prog.csv', index=False)
+    pd.concat([co, df]).to_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_22K.csv', index=False)
 
 
 

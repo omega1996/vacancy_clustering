@@ -1,8 +1,8 @@
 # import hdbscan
+# from sklearn.mixture import GaussianMixture
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.cluster import AffinityPropagation
 from sklearn.cluster import SpectralClustering
-# from sklearn.mixture import GaussianMixture
 from sklearn.cluster import Birch
 from sklearn.cluster import KMeans
 from sklearn.cluster import DBSCAN
@@ -11,12 +11,27 @@ from util import clustering
 
 k = 38
 
-clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans')
-clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative')
-clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1), 'SpectralClustering')
-clustering.cluster(AffinityPropagation(), 'AffinityPropagation')
-clustering.cluster(Birch(n_clusters=None), 'Birch')
-clustering.cluster(DBSCAN(n_jobs=-1), 'DBSCAN')
+vectors_list = [
+    'artm_200',
+    'artm_80',
+    'bert_768',
+    'elmo_1024_news',
+    'elmo_1024_twitter',
+    'fast_ai_50',
+    'fasttext_300',
+    'tfidf_300',
+    'tfidf_500',
+    'tfidf_80',
+    'w2v_300',
+    'w2v_tfidf'
+]
+
+clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans', vectors_list)
+clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative', vectors_list)
+clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1), 'SpectralClustering', vectors_list)
+# clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
+# clustering.cluster(Birch(n_clusters=None), 'Birch', vectors_list)
+# clustering.cluster(DBSCAN(n_jobs=-1), 'DBSCAN', vectors_list)
 
 # for k in range(16, 31, 1):
 #     clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans_' + str(k))

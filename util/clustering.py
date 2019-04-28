@@ -9,13 +9,13 @@ from sklearn.metrics.cluster import homogeneity_completeness_v_measure
 from datetime import datetime
 
 
-def cluster(model, cname):
+def cluster(model, cname, vectors_list):
     re = []
 
     print('=====================================')
     print(cname)
 
-    for name in ['tfidf_80', 'tfidf_300', 'tfidf_500']:
+    for name in vectors_list:
 
         m = clone(model)
 

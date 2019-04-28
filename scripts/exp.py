@@ -31,8 +31,8 @@ vectors_list = [
 ]
 
 clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans', vectors_list)
-clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative', vectors_list)
-clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1), 'SpectralClustering', vectors_list)
+# clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative', vectors_list)
+# clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1), 'SpectralClustering', vectors_list)
 # clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
 # clustering.cluster(Birch(n_clusters=None), 'Birch', vectors_list)
 # clustering.cluster(DBSCAN(n_jobs=-1), 'DBSCAN', vectors_list)

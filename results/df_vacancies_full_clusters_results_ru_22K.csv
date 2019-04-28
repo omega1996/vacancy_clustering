@@ -32,34 +32,34 @@ KMeans,tfidf_80,38,0.4220634257672267,0.6595418605726837,0.6880881816459229,0.72
 KMeans,w2v_300,38,0.3180385797090843,0.5858413368298679,0.6375062143696373,0.6252443761092392,0.6313157614412924,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-KMeans,w2v_tfidf,38,0.22894678329244916,0.4963437307383263,0.5532891487368006,0.5441987212002544,0.5487062872299688,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans,w2v_tfidf,38,0.2289467832924492,0.4963437307383263,0.5532891487368006,0.5441987212002544,0.5487062872299688,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-Agglomerative,artm_200,38,0.44659162581423073,0.6709255224137568,0.7016434566595366,0.7086833059001021,0.705145811068913,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+Agglomerative,artm_200,38,0.4465916258142307,0.6709255224137568,0.7016434566595366,0.7086833059001021,0.7051458110689129,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
-Agglomerative,artm_80,38,0.38323671439510804,0.6460815661076513,0.6924915887747831,0.6796285886658485,0.6859997963441367,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+Agglomerative,artm_80,38,0.383236714395108,0.6460815661076513,0.6924915887747831,0.6796285886658485,0.6859997963441367,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
-Agglomerative,bert_768_wmc,38,0.051489936446840016,0.16760948129806885,0.2460809452499029,0.24834095155876906,0.24720578315118974,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+Agglomerative,bert_768_wmc,38,0.051489936446840016,0.16760948129806885,0.2460809452499029,0.24834095155876906,0.2472057831511897,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
 Agglomerative,elmo_1024_news,38,0.14189949215572745,0.37147099191081867,0.4310473420578421,0.4314672447767086,0.4312571912055006,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
-Agglomerative,elmo_1024_twitter,38,0.14419202161778574,0.3530255568429559,0.4122560267244898,0.41865447095612984,0.41543061316131685,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+Agglomerative,elmo_1024_twitter,38,0.14419202161778574,0.3530255568429559,0.4122560267244898,0.41865447095612973,0.4154306131613169,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
-Agglomerative,fast_ai_50,38,0.22380875660781951,0.434971539772461,0.49127514313365866,0.48828345327412437,0.4897747297134263,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+Agglomerative,fast_ai_50,38,0.22380875660781951,0.434971539772461,0.4912751431336586,0.4882834532741244,0.4897747297134263,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
-Agglomerative,fasttext_300,38,0.12022996369351371,0.3799646530312643,0.4329431137990411,0.48461714400211453,0.45732507165789216,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+Agglomerative,fasttext_300,38,0.12022996369351373,0.3799646530312643,0.4329431137990411,0.4846171440021145,0.4573250716578922,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
 Agglomerative,tfidf_300,37,0.3267306936878399,0.5633389615749256,0.5945094007564148,0.6826926964936887,0.6355567795685608,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
-Agglomerative,tfidf_500,37,0.30956511569933054,0.5469441402023559,0.5783657297850349,0.6909503881142243,0.6296650926143096,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+Agglomerative,tfidf_500,37,0.3095651156993305,0.5469441402023559,0.5783657297850349,0.6909503881142243,0.6296650926143096,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
 Agglomerative,tfidf_80,38,0.4192841174447616,0.6433368181377572,0.6716730967984396,0.7345528503773765,0.7017071314406739,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
@@ -71,3 +71,15 @@ Agglomerative,w2v_300,38,0.3253914938782676,0.6022575070593909,0.649957902854604
 Agglomerative,w2v_tfidf,38,0.2662765952227525,0.536041127902726,0.5796692030947718,0.5834393896428987,0.581548185887537,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
+KMeans,artm_300_30,38,0.43872135646154803,0.6869435340356073,0.7177537092564736,0.7166626473625376,0.7172077633616243,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans,artm_300_60,38,0.4391460226242769,0.6958283328602037,0.7247771348496008,0.7249006451958746,0.7248388847612907,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans,artm_500_30,38,0.4376186387390803,0.693899113594861,0.722444280786285,0.7346154774664297,0.7284790445508406,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans,artm_500_60,38,0.4422717765400844,0.7091795271993921,0.7368332716459391,0.740130465778992,0.7384781883617313,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"

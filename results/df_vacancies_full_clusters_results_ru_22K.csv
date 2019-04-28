@@ -47,7 +47,7 @@ Agglomerative,bert_768_wmc,38,0.051489936446840016,0.16760948129806885,0.2460809
 Agglomerative,elmo_1024_news,38,0.14189949215572745,0.37147099191081867,0.4310473420578421,0.4314672447767086,0.4312571912055006,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
-Agglomerative,elmo_1024_twitter,38,0.14419202161778574,0.3530255568429559,0.4122560267244898,0.41865447095612973,0.4154306131613169,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+Agglomerative,elmo_1024_twitter,38,0.14419202161778574,0.3530255568429559,0.4122560267244898,0.4186544709561297,0.4154306131613169,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
 Agglomerative,fast_ai_50,38,0.22380875660781951,0.434971539772461,0.4912751431336586,0.4882834532741244,0.4897747297134263,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
@@ -71,15 +71,23 @@ Agglomerative,w2v_300,38,0.3253914938782676,0.6022575070593909,0.649957902854604
 Agglomerative,w2v_tfidf,38,0.2662765952227525,0.536041127902726,0.5796692030947718,0.5834393896428987,0.581548185887537,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7ff43ae80510>)"
-KMeans,artm_300_30,38,0.43872135646154803,0.6869435340356073,0.7177537092564736,0.7166626473625376,0.7172077633616243,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans,artm_300_30,38,0.438721356461548,0.6869435340356073,0.7177537092564736,0.7166626473625376,0.7172077633616243,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
 KMeans,artm_300_60,38,0.4391460226242769,0.6958283328602037,0.7247771348496008,0.7249006451958746,0.7248388847612907,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-KMeans,artm_500_30,38,0.4376186387390803,0.693899113594861,0.722444280786285,0.7346154774664297,0.7284790445508406,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans,artm_500_30,38,0.4376186387390803,0.693899113594861,0.7224442807862851,0.7346154774664297,0.7284790445508406,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
 KMeans,artm_500_60,38,0.4422717765400844,0.7091795271993921,0.7368332716459391,0.740130465778992,0.7384781883617313,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
+AffinityPropagation,tfidf_300,677,0.09616296877376927,0.2603259360285618,0.8668209906280212,0.5013103139801306,0.6352406402991563,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"
+AffinityPropagation,w2v_300,443,0.13979353925124416,0.3537034583082284,0.909866470264944,0.5487900649655977,0.6846377708070926,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"
+AffinityPropagation,artm_500_60,574,0.09734781370120588,0.281951292748236,0.8762512091424804,0.5112523634841531,0.6457432045841507,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"
+AffinityPropagation,elmo_1024_news,625,0.03840700000051265,0.13865762485484093,0.7535860354200448,0.4265007804222996,0.5447142157800947,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"

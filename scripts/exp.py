@@ -15,25 +15,25 @@ vectors_list = [
     # 'artm_200',
     # 'artm_80',
     # 'bert_768_wmc',
-    # 'elmo_1024_news',
     # 'elmo_1024_twitter',
     # 'fast_ai_50',
     # 'fasttext_300',
-    # 'tfidf_300',
+    'tfidf_300',
+    'w2v_300',
+    'artm_500_60',
+    'elmo_1024_news',
     # 'tfidf_500',
     # 'tfidf_80',
-    # 'w2v_300',
     # 'w2v_tfidf',
-    'artm_300_30',
-    'artm_300_60',
-    'artm_500_30',
-    'artm_500_60',
+    # 'artm_300_30',
+    # 'artm_300_60',
+    # 'artm_500_30',
 ]
 
-clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans', vectors_list)
+# clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans', vectors_list)
 # clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative', vectors_list)
 # clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1), 'SpectralClustering', vectors_list)
-# clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
+clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
 # clustering.cluster(Birch(n_clusters=None), 'Birch', vectors_list)
 # clustering.cluster(DBSCAN(n_jobs=-1), 'DBSCAN', vectors_list)
 

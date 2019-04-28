@@ -20,7 +20,7 @@ def cluster(model, cname):
         m = clone(model)
 
         print(str(datetime.now()))
-        data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_22K_' + name + '.pkl')
+        data = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/release/df_vacancies_full_ru_22K_' + name + '.pkl')
         vectors_name = str(name)
         # co = data[data.is_prog]
         co = data

@@ -12,18 +12,22 @@ from util import clustering
 k = 38
 
 vectors_list = [
-    'artm_200',
-    'artm_80',
-    'bert_768_wmc',
-    'elmo_1024_news',
-    'elmo_1024_twitter',
-    'fast_ai_50',
-    'fasttext_300',
-    'tfidf_300',
-    'tfidf_500',
-    'tfidf_80',
-    'w2v_300',
-    'w2v_tfidf'
+    # 'artm_200',
+    # 'artm_80',
+    # 'bert_768_wmc',
+    # 'elmo_1024_news',
+    # 'elmo_1024_twitter',
+    # 'fast_ai_50',
+    # 'fasttext_300',
+    # 'tfidf_300',
+    # 'tfidf_500',
+    # 'tfidf_80',
+    # 'w2v_300',
+    # 'w2v_tfidf',
+    'artm_300_30',
+    'artm_300_60',
+    'artm_500_30',
+    'artm_500_60',
 ]
 
 clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans', vectors_list)

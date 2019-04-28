@@ -14,7 +14,7 @@ k = 38
 vectors_list = [
     'artm_200',
     'artm_80',
-    'bert_768',
+    'bert_768_wmc',
     'elmo_1024_news',
     'elmo_1024_twitter',
     'fast_ai_50',

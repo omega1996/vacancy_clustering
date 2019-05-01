@@ -12,7 +12,7 @@ elmo = ELMoEmbedder("http://files.deeppavlov.ai/deeppavlov_data/elmo_ru-wiki_600
 # elmo([['вопрос', 'жизни', 'Вселенной', 'и', 'вообще', 'всего'], ['42']])
 
 co = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/release/df_vacancies_full_ru_22K.pkl')
-documents = np.array(co.preprocessed_text.apply(eval)).tolist()
+documents = np.array(co.preprocessed_text).tolist()
 
 print(str(datetime.now()))
 vectors = elmo(documents)

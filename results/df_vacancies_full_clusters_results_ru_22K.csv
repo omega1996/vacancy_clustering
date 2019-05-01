@@ -97,7 +97,7 @@ AffinityPropagation,artm_80,367,0.11879678497116054,0.3326655087593317,0.8482722
           damping=0.5, max_iter=200, preference=None, verbose=False)"
 AffinityPropagation,bert_768_wmc,532,0.01964891948047254,0.08885949529022702,0.6535202879739659,0.3799204463352144,0.4805030637042916,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
           damping=0.5, max_iter=200, preference=None, verbose=False)"
-AffinityPropagation,elmo_1024_twitter,625,0.04092277996198128,0.14610235552239975,0.750816554255649,0.42832341341179403,0.5454692711350122,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+AffinityPropagation,elmo_1024_twitter,625,0.04092277996198128,0.14610235552239975,0.750816554255649,0.428323413411794,0.5454692711350122,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
           damping=0.5, max_iter=200, preference=None, verbose=False)"
 AffinityPropagation,fast_ai_50,458,0.04432209683987496,0.17003844839884924,0.7234353054911228,0.42731780623036186,0.5372773439293176,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
           damping=0.5, max_iter=200, preference=None, verbose=False)"
@@ -131,13 +131,13 @@ Birch,w2v_300,37,0.3359191087125745,0.5828482169436634,0.6199646682417821,0.6330
    threshold=0.58)"
 Birch,tfidf_80,46,0.23250000279805025,0.4820295075943197,0.5164936359614332,0.6893890922122555,0.5905467762493299,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.2)"
-Birch,tfidf_300,49,0.02337075854423739,0.16837917292797702,0.20732656485890608,0.6266150976171762,0.31156605197530396,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch,tfidf_300,49,0.02337075854423739,0.16837917292797702,0.20732656485890608,0.6266150976171762,0.311566051975304,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.3)"
 Birch,tfidf_500,294,0.08056858030495515,0.3352354717600904,0.4566293667473091,0.5730305397318561,0.5082504831704271,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.3)"
 Birch,artm_80,31,0.41534733224287096,0.6219477655834837,0.6496162331777167,0.7159560933161764,0.6811747593843295,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.11)"
-Birch,artm_200,74,0.481255065604032,0.6682722326302463,0.7409883029095382,0.7099909818759866,0.7251585439679497,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch,artm_200,74,0.48125506560403203,0.6682722326302463,0.7409883029095382,0.7099909818759866,0.7251585439679497,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.13)"
 Birch,artm_300_30,27,0.21588553353363826,0.507923541905324,0.5365439326026497,0.7511657859257539,0.6259694075738611,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.11)"
@@ -174,3 +174,6 @@ Agglomerative,lsi_500,38,0.2443250165499434,0.4929019274470993,0.537376954965026
             pooling_func=<function mean at 0x7f939a3d7510>)"
 AffinityPropagation,lsi_300,746,0.054734245145644816,0.18184772579236216,0.8001999028451081,0.4558447844928053,0.5808184309695008,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
           damping=0.5, max_iter=200, preference=None, verbose=False)"
+Agglomerative,lsi_300,38,0.26359240720433147,0.4996495056921743,0.5424826359648677,0.5731337223288455,0.5573871163467696,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+            connectivity=None, linkage='ward', memory=None, n_clusters=38,
+            pooling_func=<function mean at 0x7f97453d3510>)"

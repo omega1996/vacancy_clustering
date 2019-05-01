@@ -149,7 +149,7 @@ Birch,artm_500_60,136,0.38569383252263856,0.6137656657214066,0.7364380034806444,
    threshold=0.12)"
 Birch,fasttext_300,260,0.08317602356832889,0.3079017707588776,0.5215378384281452,0.4539450274981769,0.4853996244860455,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.2)"
-SpectralClustering,tfidf_300,38,0.38005778755185854,0.5989585504496455,0.6338695940451731,0.6540515983461413,0.64380246800427,"SpectralClustering(affinity='rbf', assign_labels='kmeans', coef0=1, degree=3,
+SpectralClustering,tfidf_300,38,0.38005778755185854,0.5989585504496455,0.6338695940451731,0.6540515983461413,0.6438024680042701,"SpectralClustering(affinity='rbf', assign_labels='kmeans', coef0=1, degree=3,
           eigen_solver=None, eigen_tol=0.0, gamma=1.0, kernel_params=None,
           n_clusters=38, n_init=10, n_jobs=-1, n_neighbors=10,
           random_state=None)"
@@ -161,3 +161,9 @@ SpectralClustering,artm_500_60,38,0.37962274102351257,0.647202149755486,0.680528
           eigen_solver=None, eigen_tol=0.0, gamma=1.0, kernel_params=None,
           n_clusters=38, n_init=10, n_jobs=-1, n_neighbors=10,
           random_state=None)"
+KMeans,lsi_500,38,0.2027296399927866,0.4393272323438211,0.489980733281504,0.5118614595894947,0.5006821535225476,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans,lsi_300,38,0.1952663516634096,0.4242975614674726,0.47669138407274625,0.49607124743559206,0.4861882680918735,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"

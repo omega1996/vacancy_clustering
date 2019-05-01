@@ -5,7 +5,7 @@ import gensim
 import os
 from datetime import datetime
 
-fasttext = gensim.models.FastText.load('/home/mluser/master8_projects/clustering_vacancies/models/187/model.model')
+fasttext = gensim.models.KeyedVectors.load('/home/mluser/master8_projects/clustering_vacancies/models/187/model.model')
 fasttext.wv.init_sims()
 
 step = 0

@@ -30,12 +30,14 @@ vectors_list = [
     # 'artm_300_60',
     # 'artm_500_30',
     # 'lsi_500',
-    'lsi_300'
+    # 'lsi_300',
+    # 'fasttext_300_taiga',
+    # 'elmo_1024_wiki',
 ]
 
 clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans', vectors_list)
-clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
 clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative', vectors_list)
+clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
 
 # clustering.cluster(Birch(n_clusters=None, threshold=0.58), 'Birch', ['w2v_300'])
 # clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['tfidf_80'])

@@ -19,9 +19,9 @@ vectors_list = [
     # 'elmo_1024_twitter',
     # 'fast_ai_50',
     # 'fasttext_300',
-    # 'tfidf_300',
-    # 'w2v_300',
-    # 'artm_500_60',
+    'tfidf_300',
+    'w2v_300',
+    'artm_500_60',
     # 'elmo_1024_news',
     # 'tfidf_500',
     # 'tfidf_80',
@@ -35,27 +35,26 @@ vectors_list = [
 # clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
 # clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative', vectors_list)
 
-clustering.cluster(Birch(n_clusters=None, threshold=0.58), 'Birch', ['w2v_300'])
-clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['tfidf_80'])
-clustering.cluster(Birch(n_clusters=None, threshold=0.3), 'Birch', ['tfidf_300'])
-clustering.cluster(Birch(n_clusters=None, threshold=0.3), 'Birch', ['tfidf_500'])
-clustering.cluster(Birch(n_clusters=None, threshold=0.11), 'Birch', ['artm_80'])
-clustering.cluster(Birch(n_clusters=None, threshold=0.13), 'Birch', ['artm_200'])
-clustering.cluster(Birch(n_clusters=None, threshold=0.11), 'Birch', ['artm_300_30'])
-clustering.cluster(Birch(n_clusters=None, threshold=0.13), 'Birch', ['artm_300_60'])
-clustering.cluster(Birch(n_clusters=None, threshold=0.11), 'Birch', ['artm_500_30'])
-clustering.cluster(Birch(n_clusters=None, threshold=0.12), 'Birch', ['artm_500_60'])
-clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['fasttext_300'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.58), 'Birch', ['w2v_300'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['tfidf_80'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.3), 'Birch', ['tfidf_300'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.3), 'Birch', ['tfidf_500'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.11), 'Birch', ['artm_80'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.13), 'Birch', ['artm_200'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.11), 'Birch', ['artm_300_30'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.13), 'Birch', ['artm_300_60'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.11), 'Birch', ['artm_500_30'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.12), 'Birch', ['artm_500_60'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['fasttext_300'])
 
 # a = []
-# for i in range(6, 11, 1):
-#     a.append(clustering.cluster(Birch(n_clusters=None, threshold=i/10), 'Birch' + str(i), vectors_list))
+# for i in range(1, 11, 1):
+#     a.append(clustering.cluster(DBSCAN(n_jobs=-1, eps=i/10), 'DBSCAN' + str(i), vectors_list))
 #
 # t = pd.concat(a).sort_values(['vec', 'AMI', 'v_measure'], ascending=False)
 
 # clustering.cluster(DBSCAN(n_jobs=-1), 'DBSCAN', vectors_list)
-# clustering.cluster(DBSCAN(n_jobs=-1, eps=i/10), 'DBSCAN', vectors_list)
-# clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1), 'SpectralClustering', vectors_list)
+clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1), 'SpectralClustering', vectors_list)
 
 # for k in range(16, 31, 1):
 #     clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans_' + str(k))

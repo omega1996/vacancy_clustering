@@ -13,40 +13,41 @@ from util import clustering
 k = 38
 
 vectors_list = [
-    'artm_200',
+    # 'artm_200',
     # 'artm_80',
-    'bert_768_wmc',
-    'elmo_1024_twitter',
-    'fast_ai_50',
-    'fasttext_300',
+    # 'bert_768_wmc',
+    # 'elmo_1024_twitter',
+    # 'fast_ai_50',
+    # 'fasttext_300',
     # 'tfidf_300',
     # 'w2v_300',
     # 'artm_500_60',
-    'elmo_1024_news',
-    'tfidf_500',
+    # 'elmo_1024_news',
+    # 'tfidf_500',
     # 'tfidf_80',
-    'w2v_tfidf',
-    'artm_300_30',
-    'artm_300_60',
-    'artm_500_30',
-    'lsi_500',
-    'lsi_300',
-    'fasttext_300_taiga',
-    'elmo_1024_wiki',
+    # 'w2v_tfidf',
+    # 'artm_300_30',
+    # 'artm_300_60',
+    # 'artm_500_30',
+    # 'lsi_500',
+    # 'lsi_300',
+    # 'fasttext_300_taiga',
+    # 'elmo_1024_wiki',
     # 'w2v_2',
-    'elmo_300_wiki',
-    'elmo_200_wiki',
-    'elmo_500_wiki',
+    # 'elmo_300_wiki',
+    # 'elmo_200_wiki',
+    # 'elmo_500_wiki',
     # 'elmo_100_wiki',
     # 'elmo_50_wiki',
     # 'elmo_300_wiki',
     # 'w2v_38',
-    'lsi_500_22K',
-    'lda_500_22K',
+    # 'lsi_500_22K',
+    # 'lda_500_22K',
+    'w2v_500'
 ]
 
-# clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans', vectors_list)
-# clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative', vectors_list)
+clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans', vectors_list)
+clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative', vectors_list)
 
 
 # clustering.cluster(Birch(n_clusters=None, threshold=0.48), 'Birch', ['w2v_38'])
@@ -65,10 +66,10 @@ vectors_list = [
 # clustering.cluster(Birch(n_clusters=None, threshold=0.12), 'Birch', ['artm_500_60'])
 # clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['fasttext_300'])
 
-clustering.cluster(AffinityPropagation(), 'AffinityPropagation', ['elmo_200_wiki', 'elmo_500_wiki'])
-
-for name in vectors_list:
-    clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1), 'HDBSCAN', name)
+clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
+#
+# for name in vectors_list:
+#     clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1), 'HDBSCAN', name)
 
 
 

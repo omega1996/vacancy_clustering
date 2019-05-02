@@ -5,7 +5,7 @@ from gensim.models import Word2Vec
 import os
 from datetime import datetime
 
-word2vec = Word2Vec.load('/home/mluser/master8_projects/clustering_vacancies/models/w2v/w2v_model_on_text_pos_tags')
+word2vec = Word2Vec.load('/home/mluser/master8_projects/clustering_vacancies/models/w2v_500/w2v_model_on_text_pos_tags')
 word2vec.wv.init_sims()
 
 step = 0
@@ -16,7 +16,7 @@ def get_vectorized_avg_w2v_corpus(corpus, model):
 
     document_vectors = [word_averaging(model, document) for document in documents]
     clean_corpus = corpus
-    clean_corpus['w2v'] = pd.Series(document_vectors).values
+    clean_corpus['w2v_500'] = pd.Series(document_vectors).values
 
     return clean_corpus
 
@@ -44,7 +44,7 @@ def word_averaging(wv, words):
     return mean
 
 
-d = pd.read_csv('/home/mluser/master8_projects/pycharm_project_755/data/new/vacancies_full.csv')
+d = pd.read_pickle('/home/mluser/master8_projects/clustering_vacancies/data/release/df_vacancies_full_ru_22K.pkl')
 d = get_vectorized_avg_w2v_corpus(d, word2vec.wv)
-d = d[['id', 'w2v']]
-d.to_pickle('/home/mluser/master8_projects/pycharm_project_755/data/new/vacancies_full_w2v.pkl')
+d = d[['id', 'w2v_500']]
+d.to_pickle('/home/mluser/master8_projects/clustering_vacancies/data/release/df_vacancies_full_ru_22K_w2v_500.pkl')

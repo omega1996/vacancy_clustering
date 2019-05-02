@@ -3,7 +3,7 @@ import numpy as np
 import gensim
 
 in_file = '/home/mluser/master8_projects/clustering_vacancies/data/corpus/df_vacancies_full_ru_430K.pkl'
-out_file = '/home/mluser/master8_projects/pycharm_project_755/data/new/w2v_500/w2v_model_on_text_pos_tags'
+out_file = '/home/mluser/master8_projects/clustering_vacancies/models/w2v_500/w2v_model_on_text_pos_tags'
 
 import logging  # Setting up the loggings to monitor gensim
 logging.basicConfig(format="%(levelname)s - %(asctime)s: %(message)s", datefmt= '%H:%M:%S', level=logging.INFO)

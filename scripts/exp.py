@@ -1,4 +1,4 @@
-# import hdbscan
+import hdbscan
 # from sklearn.mixture import GaussianMixture
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.cluster import AffinityPropagation
@@ -33,12 +33,23 @@ vectors_list = [
     # 'lsi_300',
     # 'fasttext_300_taiga',
     # 'elmo_1024_wiki',
+    # 'w2v_2',
+    # 'elmo_300_wiki',
+    # 'elmo_200_wiki',
+    # 'elmo_100_wiki',
+    # 'elmo_50_wiki',
+    # 'elmo_300_wiki',
+    # 'w2v_38',
+    # 'lsi_500_22K'
+    'lda_500_22K'
 ]
 
 clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans', vectors_list)
 clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative', vectors_list)
-clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
 
+
+# clustering.cluster(Birch(n_clusters=None, threshold=0.48), 'Birch', ['w2v_38'])
+# clustering.cluster(Birch(n_clusters=None, threshold=0.1), 'Birch', ['w2v_2'])
 # clustering.cluster(Birch(n_clusters=None, threshold=0.58), 'Birch', ['w2v_300'])
 # clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['tfidf_80'])
 # clustering.cluster(Birch(n_clusters=None, threshold=0.3), 'Birch', ['tfidf_300'])
@@ -51,10 +62,19 @@ clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
 # clustering.cluster(Birch(n_clusters=None, threshold=0.12), 'Birch', ['artm_500_60'])
 # clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['fasttext_300'])
 
+# clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
+# clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1), 'HDBSCAN', vectors_list)
+
+
+
+
+
+
 # a = []
 # for i in range(1, 11, 1):
-#     a.append(clustering.cluster(DBSCAN(n_jobs=-1, eps=i/10), 'DBSCAN' + str(i), vectors_list))
-#
+#     # a.append(clustering.cluster(Birch(n_clusters=None, threshold=i/100), 'Birch' + str(i), ['w2v_38']))
+#     a.append(clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1, alpha=i/10), 'HDBSCAN' + str(i/10), vectors_list))
+# #
 # t = pd.concat(a).sort_values(['vec', 'AMI', 'v_measure'], ascending=False)
 
 # clustering.cluster(DBSCAN(n_jobs=-1), 'DBSCAN', vectors_list)
@@ -69,7 +89,32 @@ clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
 # clustering.cluster_sparse(KMeans(n_clusters=k, n_jobs=-1), 'KMeans')
 
 # clustering.cluster(SpectralClustering(n_clusters=k, n_jobs=-1, assign_labels='discretize'), 'SpectralClustering')
-# clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1, alpha=.5), 'HDBSCAN')
+
+# a = []
+# met = [
+# 'braycurtis',
+#  'canberra',
+#  'chebyshev',
+#  'cityblock',
+#  'dice',
+#  'euclidean',
+#  'hamming',
+#  'infinity',
+#  'jaccard',
+#  'kulsinski',
+#  'l1',
+#  'l2',
+#  'manhattan',
+#  'p',
+#  'russellrao',
+#  'sokalsneath',
+# ]
+#
+# for m in met:
+#     a.append(clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1, metric=m), 'HDBSCAN_' + m, ['w2v_38']))
+#
+# t = pd.concat(a).sort_values(['vec', 'AMI', 'v_measure'], ascending=False)
+
 # clustering.cluster_fit_pred(GaussianMixture(n_components=k), 'GaussianMixture')
 
 # for d in range(1, 10, 1):

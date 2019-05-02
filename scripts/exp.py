@@ -66,7 +66,9 @@ vectors_list = [
 # clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['fasttext_300'])
 
 clustering.cluster(AffinityPropagation(), 'AffinityPropagation', ['elmo_200_wiki', 'elmo_500_wiki'])
-clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1), 'HDBSCAN', vectors_list)
+
+for name in vectors_list:
+    clustering.cluster(hdbscan.HDBSCAN(core_dist_n_jobs=-1), 'HDBSCAN', name)
 
 
 

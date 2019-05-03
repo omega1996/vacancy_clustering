@@ -15,7 +15,7 @@ k = 38
 vectors_list = [
     # 'artm_200',
     # 'artm_80',
-    # 'bert_768_wmc',
+    'bert_768_wmc',
     # 'elmo_1024_twitter',
     # 'fast_ai_50',
     # 'fasttext_300',
@@ -43,7 +43,9 @@ vectors_list = [
     # 'w2v_38',
     # 'lsi_500_22K',
     # 'lda_500_22K',
-    'w2v_500'
+    # 'w2v_500',
+    # 'w2v_1000',
+    # 'fast_ai_300',
 ]
 
 clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans', vectors_list)

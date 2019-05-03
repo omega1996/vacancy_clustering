@@ -36,7 +36,7 @@ def cluster(model, cname, vectors_list):
 
         co['label_test'] = labels
 
-        # co.to_csv('/home/mluser/master8_projects/clustering_vacancies/results/release/pred_' + str(cname) + '_' + str(name))
+        co.to_csv('/home/mluser/master8_projects/clustering_vacancies/results/release/pred_' + str(cname) + '_' + str(name))
 
         print(co.shape)
         print(str(datetime.now()))

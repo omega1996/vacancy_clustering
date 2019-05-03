@@ -97,7 +97,7 @@ AffinityPropagation,artm_80,367,0.11879678497116054,0.3326655087593317,0.8482722
           damping=0.5, max_iter=200, preference=None, verbose=False)"
 AffinityPropagation,bert_768_wmc,532,0.01964891948047254,0.08885949529022702,0.6535202879739659,0.3799204463352144,0.4805030637042916,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
           damping=0.5, max_iter=200, preference=None, verbose=False)"
-AffinityPropagation,elmo_1024_twitter,625,0.04092277996198128,0.14610235552239975,0.750816554255649,0.428323413411794,0.5454692711350122,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+AffinityPropagation,elmo_1024_twitter,625,0.04092277996198128,0.14610235552239975,0.750816554255649,0.42832341341179403,0.5454692711350122,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
           damping=0.5, max_iter=200, preference=None, verbose=False)"
 AffinityPropagation,fast_ai_50,458,0.04432209683987496,0.17003844839884924,0.7234353054911228,0.42731780623036186,0.5372773439293176,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
           damping=0.5, max_iter=200, preference=None, verbose=False)"
@@ -131,13 +131,13 @@ Birch,w2v_300,37,0.3359191087125745,0.5828482169436634,0.6199646682417821,0.6330
    threshold=0.58)"
 Birch,tfidf_80,46,0.23250000279805025,0.4820295075943197,0.5164936359614332,0.6893890922122555,0.5905467762493299,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.2)"
-Birch,tfidf_300,49,0.02337075854423739,0.16837917292797702,0.20732656485890608,0.6266150976171762,0.311566051975304,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch,tfidf_300,49,0.02337075854423739,0.16837917292797702,0.20732656485890608,0.6266150976171762,0.31156605197530396,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.3)"
 Birch,tfidf_500,294,0.08056858030495515,0.3352354717600904,0.4566293667473091,0.5730305397318561,0.5082504831704271,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.3)"
 Birch,artm_80,31,0.41534733224287096,0.6219477655834837,0.6496162331777167,0.7159560933161764,0.6811747593843295,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.11)"
-Birch,artm_200,74,0.48125506560403203,0.6682722326302463,0.7409883029095382,0.7099909818759866,0.7251585439679497,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch,artm_200,74,0.481255065604032,0.6682722326302463,0.7409883029095382,0.7099909818759866,0.7251585439679497,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.13)"
 Birch,artm_300_30,27,0.21588553353363826,0.507923541905324,0.5365439326026497,0.7511657859257539,0.6259694075738611,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.11)"
@@ -183,7 +183,7 @@ KMeans,lsi_38,38,0.13763994982585126,0.35672504954488043,0.4156504541285712,0.43
 KMeans,lsi_38,38,0.13348849316714892,0.3573745206717971,0.4163909295307172,0.4293223228667245,0.42275776235028495,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-Agglomerative,lsi_38,38,0.17493735223782308,0.3957238332926257,0.451093455908049,0.465120243470971,0.4579994780307646,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+Agglomerative,lsi_38,38,0.17493735223782308,0.3957238332926257,0.45109345590804906,0.465120243470971,0.4579994780307646,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7fd935e46510>)"
 KMeans,fasttext_300_taiga,38,0.16406593241412834,0.3792208997286671,0.4418817087456601,0.4382277001587426,0.4400471191573402,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
@@ -213,9 +213,9 @@ KMeans,w2v_300,38,0.3289506793069285,0.5896681099622518,0.6426280069344144,0.628
     random_state=None, tol=0.0001, verbose=0)"
 Birch,w2v_300,37,0.3359191087125745,0.5828482169436634,0.6199646682417821,0.6330397136348436,0.626433972177667,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.58)"
-Birch,tfidf_300,49,0.02337075854423739,0.16837917292797702,0.20732656485890608,0.6266150976171762,0.31156605197530396,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch,tfidf_300,49,0.02337075854423739,0.16837917292797702,0.20732656485890608,0.6266150976171762,0.311566051975304,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.3)"
-Birch,artm_200,74,0.481255065604032,0.6682722326302463,0.7409883029095382,0.7099909818759866,0.7251585439679497,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch,artm_200,74,0.48125506560403203,0.6682722326302463,0.7409883029095382,0.7099909818759866,0.7251585439679497,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.13)"
 KMeans,w2v_2,38,0.09675949466987092,0.3102498624267338,0.3800378110980955,0.3752369832413196,0.3776221391813018,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
@@ -224,7 +224,7 @@ Birch,w2v_2,1,0.0,-1.660684111049856e-16,-9.10855398785264e-17,1.0,-1.8217107975
    threshold=0.58)"
 Birch1,w2v_2,23,0.1153125312861667,0.30083920125992386,0.3366462985530569,0.4151565531056995,0.3718020398957381,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.1)"
-Birch2,w2v_2,7,0.0916877637298132,0.2408513639088589,0.25202175172708463,0.5045602585764912,0.33614375834100396,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch2,w2v_2,7,0.0916877637298132,0.2408513639088589,0.25202175172708463,0.5045602585764912,0.336143758341004,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.2)"
 Birch3,w2v_2,2,0.058482839035404674,0.15590172577816466,0.15787384439582358,0.8138618457159776,0.2644494787990737,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.3)"
@@ -262,7 +262,7 @@ DBSCAN9,w2v_2,1,0.0,-1.660684111049856e-16,-9.10855398785264e-17,1.0,-1.82171079
     metric_params=None, min_samples=5, n_jobs=-1, p=None)"
 DBSCAN10,w2v_2,1,0.0,-1.660684111049856e-16,-9.10855398785264e-17,1.0,-1.8217107975705287e-16,"DBSCAN(algorithm='auto', eps=1.0, leaf_size=30, metric='euclidean',
     metric_params=None, min_samples=5, n_jobs=-1, p=None)"
-KMeans,elmo_300_wiki,38,0.18189794196603354,0.41358317839742603,0.4813034721359274,0.4692703817370725,0.4752107649087116,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+KMeans,elmo_300_wiki,38,0.18189794196603354,0.413583178397426,0.4813034721359274,0.4692703817370725,0.4752107649087116,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
 KMeans,elmo_200_wiki,38,0.1715306390501743,0.4001555573416237,0.4674960355182888,0.4571319952103226,0.4622559307465267,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
@@ -310,7 +310,7 @@ Birch10,w2v_38,1,0.0,-1.660684111049856e-16,-9.10855398785264e-17,1.0,-1.8217107
    threshold=1.0)"
 Birch30,w2v_38,1067,0.06051771241456345,0.18255625877825948,0.9227256148326268,0.4880496142341449,0.6384232882525518,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.3)"
-Birch31,w2v_38,984,0.07415365081980105,0.2060072116727208,0.9204378734885672,0.495514371503776,0.6442169162172919,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch31,w2v_38,984,0.07415365081980105,0.2060072116727208,0.9204378734885672,0.49551437150377603,0.6442169162172919,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.31)"
 Birch32,w2v_38,909,0.08484905851201767,0.2233223354533344,0.9110681507437682,0.4994237450351429,0.6451778548864711,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.32)"
@@ -778,15 +778,15 @@ Birch1,lsi_500,2278,0.00014984506838313283,0.0009693522006980537,1.0000000000000
    threshold=0.1)"
 Birch1,lsi_300,2277,0.00017124973942159904,0.001107836578847323,1.0000000000000004,0.4533778406680367,0.6238953532684168,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.1)"
-Birch1,fasttext_300_taiga,1976,0.006212055365299734,0.030585199389213967,0.979209068041562,0.4561287308815377,0.622355782462635,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch1,fasttext_300_taiga,1976,0.006212055365299734,0.030585199389213967,0.9792090680415619,0.4561287308815377,0.622355782462635,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.1)"
 Birch1,elmo_1024_wiki,2281,8.562840442419722e-05,0.0005539073049942531,1.0000000000000004,0.4532355374091099,0.623760602795549,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.1)"
 Birch1,w2v_2,23,0.1153125312861667,0.30083920125992386,0.3366462985530569,0.4151565531056995,0.3718020398957381,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.1)"
-Birch1,elmo_300_wiki,2280,0.0001070344008981106,0.0006923875637918363,1.0000000000000004,0.45327110484845706,0.6237942849565195,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch1,elmo_300_wiki,2280,0.0001070344008981106,0.0006923875637918363,1.0000000000000004,0.453271104848457,0.6237942849565195,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.1)"
-Birch1,elmo_200_wiki,2280,0.0001070344008981106,0.0006923875637916268,1.0000000000000004,0.45327110484845706,0.6237942849565195,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch1,elmo_200_wiki,2280,0.0001070344008981106,0.0006923875637916268,1.0000000000000004,0.453271104848457,0.6237942849565195,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.1)"
 Birch1,elmo_500_wiki,2281,8.562840442419722e-05,0.0005539073049943579,1.0000000000000004,0.4532355374091098,0.6237606027955489,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.1)"
@@ -802,7 +802,7 @@ Birch2,fasttext_300_taiga,389,0.10622970473148252,0.2361058508615621,0.576498508
    threshold=0.2)"
 Birch2,elmo_1024_wiki,2275,0.0002354611018849502,0.0014341388429942035,1.0000000000000004,0.4534624625135621,0.6239754712747952,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.2)"
-Birch2,w2v_2,7,0.0916877637298132,0.2408513639088589,0.25202175172708463,0.5045602585764912,0.336143758341004,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch2,w2v_2,7,0.0916877637298132,0.2408513639088589,0.25202175172708463,0.5045602585764912,0.33614375834100396,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.2)"
 Birch2,elmo_300_wiki,2275,0.0002354611018849502,0.0014341388429944134,1.0000000000000004,0.4534624625135621,0.6239754712747951,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.2)"
@@ -900,7 +900,7 @@ Birch7,lsi_300,2272,0.00027826646812057696,0.00180027906737463,1.000000000000000
    threshold=0.7)"
 Birch7,fasttext_300_taiga,1,0.0,-1.660684111049856e-16,-9.10855398785264e-17,1.0,-1.8217107975705287e-16,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.7)"
-Birch7,elmo_1024_wiki,2260,0.001326446284207136,0.004441101448379927,1.0000000000000004,0.454268803102577,0.6247384281825031,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
+Birch7,elmo_1024_wiki,2260,0.001326446284207136,0.004441101448379927,1.0000000000000004,0.45426880310257706,0.6247384281825031,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.7)"
 Birch7,w2v_2,1,0.0,-1.660684111049856e-16,-9.10855398785264e-17,1.0,-1.8217107975705287e-16,"Birch(branching_factor=50, compute_labels=True, copy=True, n_clusters=None,
    threshold=0.7)"
@@ -995,7 +995,7 @@ Agglomerative,elmo_300_wiki,38,0.17312877614053068,0.4137661604377874,0.47338936
 Agglomerative,w2v_38,38,0.3438943089540165,0.6089757357664699,0.6498330817499274,0.6460338798441405,0.6479279115775273,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7fadcd6a7d08>)"
-AffinityPropagation,lda_500_22K,797,0.0466772265370918,0.17188842384552447,0.8429005630091518,0.462994750320373,0.5976873210767817,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+AffinityPropagation,lda_500_22K,797,0.0466772265370918,0.17188842384552447,0.8429005630091518,0.46299475032037296,0.5976873210767817,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
           damping=0.5, max_iter=200, preference=None, verbose=False)"
 AffinityPropagation,elmo_200_wiki,596,0.040459815351278884,0.15584656327233207,0.7604775349059565,0.43403464580270734,0.5526500320959494,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
           damping=0.5, max_iter=200, preference=None, verbose=False)"
@@ -1004,6 +1004,30 @@ AffinityPropagation,elmo_500_wiki,582,0.04027716250124861,0.15627665858667114,0.
 KMeans,w2v_500,38,0.32338541975070045,0.5908199654569382,0.6355722622443634,0.6296568354854835,0.632600720431084,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)"
-Agglomerative,w2v_500,38,0.34879336486599133,0.6182703780049763,0.6586556430337053,0.6545057761739719,0.6565741523768666,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+Agglomerative,w2v_500,38,0.3487933648659913,0.6182703780049763,0.6586556430337053,0.6545057761739719,0.6565741523768666,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
             connectivity=None, linkage='ward', memory=None, n_clusters=38,
             pooling_func=<function mean at 0x7f436fa0ad08>)"
+KMeans,w2v_1000,38,0.3200188312649725,0.5836221752683081,0.6324170404838333,0.6230686570531849,0.6277080445995179,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+KMeans,fast_ai_300,38,0.07663557484606551,0.1870096930323676,0.25792894688802576,0.2684696592798301,0.26309376840315096,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+Agglomerative,w2v_1000,38,0.3511288466323143,0.6260808083340889,0.6636098017266115,0.6615278624758729,0.662567196621714,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+            connectivity=None, linkage='ward', memory=None, n_clusters=38,
+            pooling_func=<function mean at 0x7f358056bd08>)"
+Agglomerative,fast_ai_300,37,0.06674251676316248,0.18064219631332265,0.2515736065734861,0.26674117349167803,0.2589354639993432,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+            connectivity=None, linkage='ward', memory=None, n_clusters=38,
+            pooling_func=<function mean at 0x7fdb87ee1d08>)"
+AffinityPropagation,fast_ai_300,402,0.028287502771182763,0.10870286126105172,0.6063017604559103,0.36998701510110427,0.4595439058973933,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"
+AffinityPropagation,w2v_1000,444,0.13485124741659385,0.3312049934067722,0.882352005127514,0.5328548187142954,0.6644477822090705,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"
+KMeans,bert_768_wmc,38,0.05113800433236797,0.17183820777364664,0.2538629235255319,0.2503380655084451,0.2520881734145801,"KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
+    n_clusters=38, n_init=10, n_jobs=-1, precompute_distances='auto',
+    random_state=None, tol=0.0001, verbose=0)"
+Agglomerative,bert_768_wmc,38,0.051489936446840016,0.16760948129806885,0.2460809452499029,0.24834095155876906,0.2472057831511897,"AgglomerativeClustering(affinity='euclidean', compute_full_tree='auto',
+            connectivity=None, linkage='ward', memory=None, n_clusters=38,
+            pooling_func=<function mean at 0x7fda611a1d08>)"
+AffinityPropagation,bert_768_wmc,532,0.01964891948047254,0.08885949529022702,0.6535202879739659,0.37992044633521443,0.48050306370429163,"AffinityPropagation(affinity='euclidean', convergence_iter=15, copy=True,
+          damping=0.5, max_iter=200, preference=None, verbose=False)"

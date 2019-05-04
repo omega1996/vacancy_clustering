@@ -315,3 +315,19 @@ v = [
 0.6259,
 0.6311
 ]
+
+
+t = pd.get_dummies(co.label_true)
+t['Birch_artm_200'] = co.Birch_artm_200
+d = t.groupby(['Birch_artm_200']).sum()
+d = d[[     1,      2,      3,      4,      5,      6,      7,      8,      9,
+           10,     11,     12,     13,     14,     15,     16,    101,    102,
+          103,    104,    105,    106,    107,    108,    109,    110,    111,
+          112,    113,    114,    115,    116,    117,    118,    119,    120,
+          121,    122]]
+sns.set()
+sns.set_palette(sns.color_palette("hls", 38))
+d.T.plot(kind='bar', stacked=True, legend=False)
+plt.savefig(
+        '/home/mluser/master8_projects/clustering_vacancies/results/release/plots/counts_labels_colored_Birch_artm_200.png',
+        format='png', dpi=300)

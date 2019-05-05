@@ -1,4 +1,1 @@
-# vacancy_clustering
----
-Corpus: https://drive.google.com/file/d/1h-TPDWNNAFGRxvJnivSqCB7wPBhZCrdo/view
----
+# Experimental Comparison of Unsupervised Approaches in the Task of Separating Specializations within Professions in Job Vacancies

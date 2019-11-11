@@ -15,7 +15,7 @@ k = 38
 vectors_list = [
     # 'artm_200',
     # 'artm_80',
-    'bert_768_wmc',
+    # 'bert_768_wmc',
     # 'elmo_1024_twitter',
     # 'fast_ai_50',
     # 'fasttext_300',
@@ -46,27 +46,30 @@ vectors_list = [
     # 'w2v_500',
     # 'w2v_1000',
     # 'fast_ai_300',
+    'bert_768_ru'
 ]
 
 clustering.cluster(KMeans(n_clusters=k, n_jobs=-1), 'KMeans', vectors_list)
-clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative', vectors_list)
+# clustering.cluster(AgglomerativeClustering(n_clusters=k), 'Agglomerative', vectors_list)
 
-
+# a = []
 # clustering.cluster(Birch(n_clusters=None, threshold=0.48), 'Birch', ['w2v_38'])
 # clustering.cluster(Birch(n_clusters=None, threshold=0.1), 'Birch', ['w2v_2'])
-# clustering.cluster(Birch(n_clusters=None, threshold=0.3), 'Birch', ['lda_500_22K'])
-# clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['fasttext_300_taiga'])
-# clustering.cluster(Birch(n_clusters=None, threshold=0.58), 'Birch', ['w2v_300'])
+# a.append(clustering.cluster(Birch(n_clusters=None, threshold=0.3), 'Birch', ['lda_500_22K']))
+# a.append(clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['fasttext_300_taiga']))
+# a.append(clustering.cluster(Birch(n_clusters=None, threshold=0.58), 'Birch', ['w2v_300']))
 # clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['tfidf_80'])
-# clustering.cluster(Birch(n_clusters=None, threshold=0.3), 'Birch', ['tfidf_300'])
+# a.append(clustering.cluster(Birch(n_clusters=None, threshold=0.3), 'Birch', ['tfidf_300']))
 # clustering.cluster(Birch(n_clusters=None, threshold=0.3), 'Birch', ['tfidf_500'])
 # clustering.cluster(Birch(n_clusters=None, threshold=0.11), 'Birch', ['artm_80'])
-# clustering.cluster(Birch(n_clusters=None, threshold=0.13), 'Birch', ['artm_200'])
+# a.append(clustering.cluster(Birch(n_clusters=None, threshold=0.13), 'Birch', ['artm_200']))
 # clustering.cluster(Birch(n_clusters=None, threshold=0.11), 'Birch', ['artm_300_30'])
 # clustering.cluster(Birch(n_clusters=None, threshold=0.13), 'Birch', ['artm_300_60'])
 # clustering.cluster(Birch(n_clusters=None, threshold=0.11), 'Birch', ['artm_500_30'])
-# clustering.cluster(Birch(n_clusters=None, threshold=0.12), 'Birch', ['artm_500_60'])
-# clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['fasttext_300'])
+# a.append(clustering.cluster(Birch(n_clusters=None, threshold=0.12), 'Birch', ['artm_500_60']))
+# a.append(clustering.cluster(Birch(n_clusters=None, threshold=0.2), 'Birch', ['fasttext_300']))
+#
+# t = pd.concat(a)
 
 clustering.cluster(AffinityPropagation(), 'AffinityPropagation', vectors_list)
 #

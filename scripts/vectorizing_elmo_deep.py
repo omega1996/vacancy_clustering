@@ -7,6 +7,7 @@ import os
 os.environ["TFHUB_CACHE_DIR"] = '/home/mluser/master8_projects/clustering_vacancies/tmp'
 
 from deeppavlov.models.embedders.elmo_embedder import ELMoEmbedder
+from deeppavlov.models.embedders.abstract_embedder import ABCMeta
 
 elmo = ELMoEmbedder("http://files.deeppavlov.ai/deeppavlov_data/elmo_ru-wiki_600k_steps.tar.gz")
 # elmo([['вопрос', 'жизни', 'Вселенной', 'и', 'вообще', 'всего'], ['42']])

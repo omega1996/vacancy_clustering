@@ -177,19 +177,23 @@ sns.countplot(name, data=co, palette=sns.color_palette("Blues_r"))
 plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/release/plots/counts_labels'+name+'.png', format='png', dpi=300)
 
 
+
+
+
+
 names = [
-    # 'KMeans_artm_200',
-    # 'KMeans_tfidf_300',
-    # 'KMeans_w2v_300',
-    # 'Birch_artm_200',
-    # 'Birch_w2v_300',
-    # 'Birch_tfidf_300',
+    'KMeans_artm_200',
+    'KMeans_tfidf_300',
+    'KMeans_w2v_300',
+    'Birch_artm_200',
+    'Birch_w2v_300',
+    'Birch_tfidf_300',
     # 'AffinityPropagation_artm_200',
     # 'AffinityPropagation_tfidf_300',
     # 'AffinityPropagation_w2v_300',
-    'KMeans_bert_768_wmc',
-    'Agglomerative_bert_768_wmc',
-    'AffinityPropagation_bert_768_wmc',
+    # 'KMeans_bert_768_wmc',
+    # 'Agglomerative_bert_768_wmc',
+    # 'AffinityPropagation_bert_768_wmc',
 ]
 
 a = []
@@ -203,7 +207,27 @@ a.append(d[['id', 'is_prog', 'is_test', 'label_true', 'title', 'text', 'pred', '
 
 
 
-k = 1
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+names = [
+    'KMeans_artm_200',
+    'KMeans_tfidf_300',
+    'KMeans_w2v_300',
+    'Birch_artm_200',
+    'Birch_w2v_300',
+    'Birch_tfidf_300',
+    # 'AffinityPropagation_artm_200',
+    # 'AffinityPropagation_tfidf_300',
+    # 'AffinityPropagation_w2v_300',
+    # 'KMeans_bert_768_wmc',
+    # 'Agglomerative_bert_768_wmc',
+    # 'AffinityPropagation_bert_768_wmc',
+]
+
+k = 5
 co = pd.read_csv('/home/mluser/master8_projects/clustering_vacancies/results/release/predict_labels_22K.csv')
 co = co[(co.label_true == k) & co.is_test]
 df = pd.read_csv('/home/mluser/master8_projects/clustering_vacancies/results/release/predict_labels_2K_trans.csv')
@@ -212,10 +236,17 @@ print(str(co.label_true.count()))
 print(df.groupby(['name', 'vec']).pred.nunique())
 for name in names:
     plt.clf()
-    sns.countplot(name, data=co, palette=sns.color_palette("Blues_r"))
+    sns.set_style("whitegrid")
+    sns.countplot(name, data=co, order=co[name].value_counts().index, palette=sns.color_palette("Blues_r")).set(ylim=(0, 90))
+    plt.xlabel(name)
+    plt.ylabel('Size of clusters')
     plt.savefig(
-        '/home/mluser/master8_projects/clustering_vacancies/results/release/plots/counts_labels'+ name + '.png',
-        format='png', dpi=300)
+        '/home/mluser/master8_projects/clustering_vacancies/results/release/plots/counts_labels_n_'+ name + '.svg',
+        format='svg', dpi=300)
+
+
+
+
 
 
 co = pd.read_csv('/home/mluser/master8_projects/clustering_vacancies/results/release/predict_labels_22K.csv')
@@ -330,4 +361,103 @@ sns.set_palette(sns.color_palette("hls", 38))
 d.T.plot(kind='bar', stacked=True, legend=False)
 plt.savefig(
         '/home/mluser/master8_projects/clustering_vacancies/results/release/plots/counts_labels_colored_Birch_artm_200.png',
+        format='png', dpi=300)
+
+
+
+
+
+labels = ['lda_500_22K', 'lsi_500_22K', 'tfidf_300', 'fasttext_300_taiga',
+       'elmo_1024_news', 'elmo_1024_twitter', 'elmo_300_wiki',
+       'elmo_1024_wiki', 'bert_768_wmc', 'fasttext_300', 'artm_200',
+       'w2v_300_tfidf', 'w2v_300']
+
+# labels = ['fasttext_300_taiga', 'lda_500_22K', 'fasttext_300', 'artm_200',
+#        'tfidf_300', 'w2v_300']
+
+co = pd.read_csv('/home/mluser/master8_projects/clustering_vacancies/results/df_vacancies_full_clusters_results_ru_22K.csv')
+vecs = ['artm_200', 'bert_768_wmc', 'elmo_1024_news',
+       'elmo_1024_twitter', 'fasttext_300', 'tfidf_300',
+       'w2v_300', 'w2v_tfidf', 'fasttext_300_taiga', 'elmo_1024_wiki',
+       'elmo_300_wiki', 'lsi_500_22K', 'lda_500_22K', 'w2v_2']
+co = co[co.vec.isin(vecs)]
+co = co[co.name == 'AffinityPropagation']
+co = co[co.vec != 'w2v_2']
+df = pd.DataFrame(co.groupby(['vec'])['n'].max())
+df['Number of clusters'] = df['n']
+df['Model'] = df.index
+df = df[['Model', 'Number of clusters']]
+df = df.sort_values(['Number of clusters'], ascending=False)
+
+plt.clf()
+sns.set_style("whitegrid")
+(f, ax) = plt.subplots(1)
+sns.barplot(x='Model', y='Number of clusters', data=df, ax=ax, palette=sns.color_palette("Blues_r")).set_xticklabels(labels, rotation=90)
+plt.subplots_adjust(bottom=0.35)
+plt.savefig(
+        '/home/mluser/master8_projects/clustering_vacancies/results/release/plots/count_by_methods_n_AffinityPropagation.svg',
+        format='svg', dpi=300)
+
+
+
+
+
+
+
+
+t = pd.get_dummies(co.label_true)
+t['label_true'] = co.label_true
+d = t.groupby(['label_true']).sum()
+d = d[[     1,      2,      3,      4,      5,      6,      7,      8,      9,
+           10,     11,     12,     13,     14,     15,     16,    101,    102,
+          103,    104,    105,    106,    107,    108,    109,    110,    111,
+          112,    113,    114,    115,    116,    117,    118,    119,    120,
+          121,    122]]
+sns.set()
+sns.set_palette(sns.color_palette("hls", 38))
+d.columns = [
+'1: 1C programmers, CRM specialists without web orientation',
+'2: 1C Bitrix programmers, CMS specialists',
+'3: PHP programmers, web developers',
+'4: Backend developers with sql, pl/sql, db knowledge',
+'5: Android, iOS, mobile developers',
+'6: Java desktop programmers',
+'7: C# .NET ASP.NET developers with web orientation',
+'8: Frontend, JavaScript developers',
+'9: C# desktop developers without web orientation',
+'10: C++, Qt programmers',
+'11: gGame developers, level designers',
+'12: Site makers, http specialists',
+'13: Automation technology specialists',
+'14: CNC-operator, machine programmer',
+'15: Microcontroller programmers, engineer programmers, IOT, embedded system developers',
+'16: Data scientists, data analytics on python, R',
+'101: Shop assistant',
+'102: System Administrator',
+'103: Technician installer engineer',
+'104: Sales Manager',
+'105: Project Managers',
+'106: Business Analysts',
+'107: Marketing, promotion, content managers',
+'108: Tech support',
+'109: Testers and QA',
+'110: SAP Consultant',
+'111: Designers',
+'112: DevOps',
+'113: Directors, heads of departments, branches',
+'114: SEO-specialists, Search Engine Specialists',
+'115: Heads, leaders and directors of 1C',
+'116: Regional Sales Managers',
+'117: Engineers, Design engineers, constructors',
+'118: Consultant Analyst 1C',
+'119: Information Security',
+'120: Online Store / Internet Project Manager',
+'121: Technical Support Engineer',
+'122: Network engineers, network administrators',
+]
+(f, ax) = plt.subplots(1)
+d.T.plot(kind='bar', stacked=True, legend=False, ax=ax)
+plt.subplots_adjust(bottom=0.5)
+plt.savefig(
+        '/home/mluser/master8_projects/clustering_vacancies/results/release/plots/counts_labels_colored_n_label_true.png',
         format='png', dpi=300)

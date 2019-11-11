@@ -17,7 +17,7 @@ co = pd.DataFrame(x, columns=['x', 'y'])
 
 plt.clf()
 sns.lmplot(data=co, x='x', y='y', hue='kmeans_k8', fit_reg=False, legend=True, legend_out=True, scatter_kws={"s": 100})
-plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering.png', format='png', dpi=300)
+plt.savefig('/home/mluser/master8_projects/clustering_vacancies/results/plots/clustering_split.svg', format='svg', dpi=300)
 
 
 

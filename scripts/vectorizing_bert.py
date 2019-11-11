@@ -15,7 +15,7 @@ print('start: ' + str(datetime.now()))
 ctx = mx.gpu(0)
 bert_embedding = BertEmbedding(ctx=ctx, model='bert_12_768_12',
                                dataset_name='wiki_multilingual_cased',
-                               max_seq_length=1000,
+                               max_seq_length=150,
                                batch_size=5)
 vectors = bert_embedding(documents)
 
